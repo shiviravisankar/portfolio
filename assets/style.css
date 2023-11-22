@@ -1,0 +1,51 @@
+/*FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500&family=Karla:wght@400;500&display=swap');
+
+:root
+{
+    --body-copy:17px;
+    --body-copy-line-height: calc(var(--body-copy)*1.5);
+
+    --main-heading: 12vw;
+    --main-heading-line-height: calc(var(--main-heading)*0.8);
+
+    --nav-tab: 5vw;
+
+    --desktop: 20px;
+}
+
+
+body
+{
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+}
+
+.sectionone
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 300px;
+}
+
+.description
+{
+    font-size: var(--body-copy);
+    width: 80%;
+    margin: auto;
+    padding: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+img{
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 550px ) 
+{
+.sectionone
+{
+    flex-direction: row;
+}
+}
