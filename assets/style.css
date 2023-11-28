@@ -1,24 +1,45 @@
 /*FONT*/
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500&family=Karla:wght@400;500&display=swap');
+@font-face {
+    font-family: 'pp_neue_montrealbook';
+    src: url('../assets/fonts/ppneuemontreal-book-webfont.woff2') format('woff2'),
+         url('../assets/fonts/ppneuemontreal-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tabular-Variable';
+    src: url('../assets/fonts/Tabular-Variable.woff2') format('woff2'),
+         url('../assets/fonts/Tabular-Variable.woff') format('woff');
+         font-weight: 300 700;
+         font-display: swap;
+         font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tabular-VariableItalic';
+    src: url('../assets/fonts/Tabular-VariableItalic.woff2') format('woff2'),
+         url('../assets/fonts/Tabular-VariableItalic.woff') format('woff');
+         font-weight: 300 700;
+         font-display: swap;
+         font-style: italic;
+}
 
 :root
 {
     --body-copy:17px;
-    --body-copy-line-height: calc(var(--body-copy)*1.5);
+    --body-copy-line-height: calc(var(--body-copy)*1.3);
 
-    --main-heading: 12vw;
-    --main-heading-line-height: calc(var(--main-heading)*0.8);
-
-    --nav-tab: 5vw;
-
-    --desktop: 20px;
+    --main-heading: 20px;
+    --main-heading-line-height: calc(var(--main-heading)*1.5);
 }
 
 
 body
 {
     margin: 0;
-    font-family: 'Karla', sans-serif;
+    font-family: 'pp_neue_montrealbook';
+    background-color: #1f1f1f;
 }
 
 .sectionone
@@ -26,17 +47,42 @@ body
     display: flex;
     flex-direction: column;
     padding-bottom: 200px;
-    background-color: #1f1f1f;
 }
 
 .description
 {
-    font-size: var(--body-copy);
-    width: 80%;
+    font-size: var(--main-heading);
+    line-height: var(--main-heading-line-height);
+    letter-spacing: 2px;
+    width: 85%;
     margin: auto;
     padding: auto;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.description p {
+    margin-bottom: 10px;
+}
+
+.links{
+    width: 85%;
+    margin: auto;
+    padding: auto;
+    font-size: var(--body-copy);
+    line-height: var(--body-copy-line-height);
+    color: white;
+}
+
+a{
+    color: #3dff50;
+    font-family: 'Tabular-Variable';
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+a::visited{
     color: white;
 }
 
@@ -59,10 +105,13 @@ img
 figcaption{
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
+    font-weight: 400;
+    letter-spacing: 2px;
     color: white;
     width: 85%;
     margin: auto;
     padding: auto;
+    margin-top: 10px;
 }
 
 /*MOBILE NAV*/
@@ -83,12 +132,21 @@ figcaption{
 .tab1, .tab2
 {
     display: flex;
-    border: 1px white solid;
     width: 50vw;
     align-items: center;
     justify-content: center;
     color: white;
+    font-family: 'Tabular-Variable';
+    font-size: var(--main-heading);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
+.tab1
+{
+    background-color: #EA34F6;
+    color: #1f1f1f;
 }
 /*DESKTOP*/
 @media screen and (min-width: 550px ) 
@@ -99,7 +157,7 @@ figcaption{
 }
 
 .work{
-    --columns: 3;
+    --columns: 2;
     align-items: start;
     gap: calc(var(--grid-gap)*2);
     padding-left: 50px;
