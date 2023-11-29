@@ -26,7 +26,7 @@
 
 :root
 {
-    --body-copy:15px;
+    --body-copy:16px;
     --body-copy-line-height: calc(var(--body-copy)*1.2);
 
     --desktop-copy: 18px;
@@ -35,7 +35,7 @@
     --navbar-copy:20px;
     --navbar-copy-line-height:calc(var(--navbar-copy)*1.2);
 
-    --media-copy:20px;
+    --media-copy:17px;
     --media-copy-line-height:calc(var(--media-copy)*1.2);
 }
 
@@ -300,11 +300,6 @@ img
         margin-bottom: 30px;
     }
 
-    h1 a
-    {
-        font-weight: 600;
-    }
-    
     .links
     {
         font-size: var(--desktop-copy);
