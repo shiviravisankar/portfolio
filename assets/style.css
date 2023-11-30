@@ -1,38 +1,37 @@
-/*FONT*/
+/*FONTS*/
 @font-face {
-    font-family: 'pp_neue_montrealbook';
-    src: url('../assets/fonts/ppneuemontreal-book-webfont.woff2') format('woff2'),
-         url('../assets/fonts/ppneuemontreal-book-webfont.woff') format('woff');
+    font-family: 'tt_commons_pro_condensedMd';
+    src: url('../assets/fonts/tt_commons_pro_condensed_medium-webfont.woff2') format('woff2'),
+         url('../assets/fonts/tt_commons_pro_condensed_medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'pp_neue_montrealmedium';
-    src: url('../assets/fonts/ppneuemontreal-medium-webfont.woff2') format('woff2'),
-         url('../assets/fonts/ppneuemontreal-medium-webfont.woff') format('woff');
+    font-family: 'tt_commons_promedium';
+    src: url('../assets/fonts/tt_commons_pro_medium-webfont.woff2') format('woff2'),
+         url('../assets/fonts/tt_commons_pro_medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Tabular-Variable';
-    src: url('../assets/fonts/Tabular-Variable.woff2') format('woff2'),
-         url('../assets/fonts/Tabular-Variable.woff') format('woff');
-         font-weight: 300 700;
-         font-display: swap;
-         font-style: normal;
+    font-family: 'fontspring_demo_-_tt_commonRg';
+    src: url('../assets/fonts/tt_commons_pro_regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/tt_commons_pro_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 :root
 {
-    --body-copy: 15px;
+    --body-copy: 17px;
     --body-copy-line-height: calc(var(--body-copy)*1.2);
 
-    --media-copy: 15px;
+    --media-copy: 18px;
     --media-copy-line-height:calc(var(--media-copy)*1.2);
 
-    --desktop-copy: 15px;
+    --desktop-copy: 20px;
     --desktop-copy-line-height:calc(var(--desktop-copy)*1.2);
 
 /*   --navbar-copy:20px;
@@ -43,9 +42,8 @@
 body
 {
     margin: 0;
-    font-family: 'pp_neue_montrealmedium';
+    font-family: 'tt_commons_promedium';
     background-color: #1f1f1f;
-    letter-spacing: 1px;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
 }
@@ -78,12 +76,13 @@ h1{
     color: white;
     margin-top: 20px;
     margin-bottom: 20px;
+    font-family: 'tt_commons_pro_condensedMd';
+    text-transform: uppercase;
 }
 
 a
 {
     color: #3dff50;
-    font-family: 'Tabular-Variable';
     font-weight: 500;
     letter-spacing: 0;
 }
@@ -160,6 +159,7 @@ body
     padding: auto;
     font-size: var(--media-copy);
     line-height: var(--media-copy-line-height);
+    font-family: 'tt_commons_promedium';
 }
 
 .description
@@ -207,6 +207,7 @@ img
         padding: auto;
         font-size: var(--media-copy);
         line-height: var(--media-copy-line-height);
+        font-family: 'fontspring_demo_-_tt_commonRg';
     }
 
     .sectionone
@@ -222,7 +223,6 @@ img
     
     figcaption
     {
-        font-family: 'pp_neue_montrealbook';
         margin: 0;
         width: 100%;
     }
@@ -257,6 +257,7 @@ img
         padding: auto;
         font-size: var(--desktop-copy);
         line-height: var(--desktop-copy-line-height);
+        font-family: 'tt_commons_promedium';
     }
 
     .sectionone
@@ -266,10 +267,10 @@ img
     
     .description
     {
-        font-family: 'pp_neue_montrealbook';
         flex: 25%;
         margin-top: 0px;
         letter-spacing: 2px;
+        font-family: 'fontspring_demo_-_tt_commonRg';
     }
 
     .description p
@@ -279,15 +280,14 @@ img
 
     h1
     {
-        font-family: 'pp_neue_montrealmedium';
         margin-bottom: 30px;
     }
     
     figcaption
     {
-        font-family: 'pp_neue_montrealbook';
         margin: 0;
         width: 100%;
+        font-family: 'fontspring_demo_-_tt_commonRg';
     }
 
     .work
