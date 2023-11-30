@@ -1,24 +1,8 @@
 /*FONTS*/
 @font-face {
-    font-family: 'geistmedium';
-    src: url('../assets/fonts/geist-medium-webfont.woff2') format('woff2'),
-         url('../assets/fonts/geist-medium-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'geistregular';
     src: url('../assets/fonts/geist-regular-webfont.woff2') format('woff2'),
          url('../assets/fonts/geist-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'geist_monomedium';
-    src: url('../assets/fonts/geistmono-medium-webfont.woff2') format('woff2'),
-         url('../assets/fonts/geistmono-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -171,8 +155,10 @@ body
 
 .description
 {
+    margin: 0;
     margin-bottom: 30px;
-    width: 90%;
+    width: 70%;
+    margin-left: 5%;
 }
 
 figcaption
