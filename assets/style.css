@@ -17,7 +17,7 @@
 
 :root
 {
-    --body-copy: 4vw;
+    --body-copy: 3.5vw;
     --body-copy-line-height: calc(var(--body-copy)*1.2);
 
     --media-copy: 2vw;
