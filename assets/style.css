@@ -26,17 +26,17 @@
 
 :root
 {
-    --body-copy:16px;
+    --body-copy: 14px;
     --body-copy-line-height: calc(var(--body-copy)*1.2);
+
+    --media-copy: 17px;
+    --media-copy-line-height:calc(var(--media-copy)*1.2);
 
     --desktop-copy: 18px;
     --desktop-copy-line-height:calc(var(--desktop-copy)*1.2);
 
 /*   --navbar-copy:20px;
     --navbar-copy-line-height:calc(var(--navbar-copy)*1.2); */
-
-    --media-copy:17px;
-    --media-copy-line-height:calc(var(--media-copy)*1.2);
 }
 
 
@@ -46,6 +46,8 @@ body
     font-family: 'pp_neue_montrealmedium';
     background-color: #1f1f1f;
     letter-spacing: 1px;
+    font-size: var(--body-copy);
+    line-height: var(--body-copy-line-height);
 }
 
 .sectionone
@@ -53,6 +55,7 @@ body
     display: flex;
     flex-direction: column;
     padding-bottom: 200px;
+    margin-top: 50px;
 }
 
 .description
@@ -60,7 +63,6 @@ body
     width: 85%;
     margin: auto;
     padding: auto;
-    margin-top: 50px;
     color: white;
 }
 
@@ -209,7 +211,6 @@ img
     .sectionone
     {
         flex-direction: row-reverse;
-        margin-top: 50px;
     }
     
     .description
@@ -259,7 +260,6 @@ img
     .sectionone
     {
         flex-direction: row-reverse;
-        margin-top: 100px;
     }
     
     .description
