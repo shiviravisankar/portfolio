@@ -78,7 +78,6 @@ a
     font-family: 'geist_monoregular';
     color: #3dff50;
     font-weight: 500;
-    letter-spacing: 0;
 }
 
 .work
@@ -262,7 +261,6 @@ img
     {
         flex: 25%;
         margin-top: 0px;
-        letter-spacing: 2px;
     }
 
     .description p
