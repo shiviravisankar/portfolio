@@ -26,13 +26,13 @@
 
 :root
 {
-    --body-copy: 14px;
+    --body-copy: 15px;
     --body-copy-line-height: calc(var(--body-copy)*1.2);
 
-    --media-copy: 17px;
+    --media-copy: 15px;
     --media-copy-line-height:calc(var(--media-copy)*1.2);
 
-    --desktop-copy: 18px;
+    --desktop-copy: 15px;
     --desktop-copy-line-height:calc(var(--desktop-copy)*1.2);
 
 /*   --navbar-copy:20px;
