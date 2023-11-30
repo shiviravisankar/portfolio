@@ -212,6 +212,8 @@ img
     {
         flex: 40%;
         margin-top: 0px;
+        position: sticky;
+        top: 50px;
     }
     
     figcaption
@@ -255,12 +257,15 @@ img
     .sectionone
     {
         flex-direction: row-reverse;
+        margin-top: 100px;
     }
     
     .description
     {
         flex: 25%;
         margin-top: 0px;
+        position: sticky;
+        top: 100px;
     }
 
     .description p{
