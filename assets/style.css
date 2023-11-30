@@ -225,7 +225,7 @@ img
         --columns: 1;
         align-items: start;
         flex: 60%;
-        margin-right: 60px;
+        margin-right: 4vw;
     }
     
     figure
@@ -288,7 +288,7 @@ img
         align-items: start;
         gap: calc(var(--grid-gap)*1.5);
         flex: 75%;
-        margin-right: 60px;
+        margin-right: 4vw;
     }
     
     figure
