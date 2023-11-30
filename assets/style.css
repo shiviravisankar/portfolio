@@ -1,31 +1,31 @@
 /*FONTS*/
 @font-face {
-    font-family: 'tt_commons_pro_condensedMd';
-    src: url('../assets/fonts/tt_commons_pro_condensed_medium-webfont.woff2') format('woff2'),
-         url('../assets/fonts/tt_commons_pro_condensed_medium-webfont.woff') format('woff');
+    font-family: 'geistmedium';
+    src: url('../assets/fonts/geist-medium-webfont.woff2') format('woff2'),
+         url('../assets/fonts/geist-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'tt_commons_promedium';
-    src: url('../assets/fonts/tt_commons_pro_medium-webfont.woff2') format('woff2'),
-         url('../assets/fonts/tt_commons_pro_medium-webfont.woff') format('woff');
+    font-family: 'geist_monomedium';
+    src: url('../assets/fonts/geistmono-medium-webfont.woff2') format('woff2'),
+         url('../assets/fonts/geistmono-medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'fontspring_demo_-_tt_commonRg';
-    src: url('../assets/fonts/tt_commons_pro_regular-webfont.woff2') format('woff2'),
-         url('../assets/fonts/tt_commons_pro_regular-webfont.woff') format('woff');
+    font-family: 'geist_monoregular';
+    src: url('../assets/fonts/geistmono-regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/geistmono-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 :root
 {
-    --body-copy: 17px;
+    --body-copy: 3vw;
     --body-copy-line-height: calc(var(--body-copy)*1.2);
 
     --media-copy: 18px;
@@ -42,7 +42,7 @@
 body
 {
     margin: 0;
-    font-family: 'tt_commons_promedium';
+    font-family: 'geistmedium';
     background-color: #1f1f1f;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
@@ -76,7 +76,7 @@ h1{
     color: white;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-family: 'tt_commons_pro_condensedMd';
+    font-family: 'geist_monomedium';
     text-transform: uppercase;
 }
 
@@ -159,7 +159,7 @@ body
     padding: auto;
     font-size: var(--media-copy);
     line-height: var(--media-copy-line-height);
-    font-family: 'tt_commons_promedium';
+    font-family: 'geistmedium';
 }
 
 .description
@@ -207,7 +207,7 @@ img
         padding: auto;
         font-size: var(--media-copy);
         line-height: var(--media-copy-line-height);
-        font-family: 'fontspring_demo_-_tt_commonRg';
+        font-family: 'geistmedium';
     }
 
     .sectionone
@@ -257,7 +257,7 @@ img
         padding: auto;
         font-size: var(--desktop-copy);
         line-height: var(--desktop-copy-line-height);
-        font-family: 'tt_commons_promedium';
+        font-family: 'geistmedium';
     }
 
     .sectionone
@@ -270,7 +270,7 @@ img
         flex: 25%;
         margin-top: 0px;
         letter-spacing: 2px;
-        font-family: 'fontspring_demo_-_tt_commonRg';
+        font-family: 'geistmedium';
     }
 
     .description p
