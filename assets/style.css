@@ -8,6 +8,14 @@
 }
 
 @font-face {
+    font-family: 'geistregular';
+    src: url('../assets/fonts/geist-regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/geist-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'geist_monomedium';
     src: url('../assets/fonts/geistmono-medium-webfont.woff2') format('woff2'),
          url('../assets/fonts/geistmono-medium-webfont.woff') format('woff');
@@ -25,13 +33,13 @@
 
 :root
 {
-    --body-copy: 3vw;
+    --body-copy: 4vw;
     --body-copy-line-height: calc(var(--body-copy)*1.2);
 
-    --media-copy: 18px;
+    --media-copy: 2vw;
     --media-copy-line-height:calc(var(--media-copy)*1.2);
 
-    --desktop-copy: 20px;
+    --desktop-copy:1vw;
     --desktop-copy-line-height:calc(var(--desktop-copy)*1.2);
 
 /*   --navbar-copy:20px;
@@ -46,6 +54,7 @@ body
     background-color: #1f1f1f;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
+    font-family: 'geistregular';
 }
 
 .sectionone
@@ -76,12 +85,11 @@ h1{
     color: white;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-family: 'geist_monomedium';
-    text-transform: uppercase;
 }
 
 a
 {
+    font-family: 'geist_monoregular';
     color: #3dff50;
     font-weight: 500;
     letter-spacing: 0;
@@ -159,7 +167,6 @@ body
     padding: auto;
     font-size: var(--media-copy);
     line-height: var(--media-copy-line-height);
-    font-family: 'geistmedium';
 }
 
 .description
@@ -207,7 +214,6 @@ img
         padding: auto;
         font-size: var(--media-copy);
         line-height: var(--media-copy-line-height);
-        font-family: 'geistmedium';
     }
 
     .sectionone
@@ -257,7 +263,6 @@ img
         padding: auto;
         font-size: var(--desktop-copy);
         line-height: var(--desktop-copy-line-height);
-        font-family: 'geistmedium';
     }
 
     .sectionone
@@ -270,7 +275,6 @@ img
         flex: 25%;
         margin-top: 0px;
         letter-spacing: 2px;
-        font-family: 'geistmedium';
     }
 
     .description p
@@ -281,13 +285,13 @@ img
     h1
     {
         margin-bottom: 30px;
+        text-transform: uppercase;
     }
     
     figcaption
     {
         margin: 0;
         width: 100%;
-        font-family: 'fontspring_demo_-_tt_commonRg';
     }
 
     .work
@@ -301,7 +305,7 @@ img
     
     figure
     {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     
     img
