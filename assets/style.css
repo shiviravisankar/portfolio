@@ -58,7 +58,7 @@ body
 }
 
 .description p {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 h1{
@@ -68,7 +68,7 @@ h1{
 
 .links{
     color: white;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
