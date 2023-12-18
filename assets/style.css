@@ -22,6 +22,7 @@
 body
 {
     margin: 0;
+    width: 90%;
     margin: auto;
     padding: auto;
     font-family: 'geist_monolight';
@@ -35,7 +36,6 @@ body
 {
     display: flex;
     flex-direction: column;
-    width: 90%;
     margin: auto;
     padding: auto;
     color: white;
@@ -79,7 +79,6 @@ img
 figcaption
 {
     color: white;
-    width: 90%;
     margin: auto;
     padding: auto;
     margin-top: 10px;
