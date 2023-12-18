@@ -66,11 +66,12 @@ a:hover{
     grid-template-columns: repeat(var(--columns),1fr);
     gap: var(--grid-gap);
     margin-bottom: 150px;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 .work img
 {
+    margin-top: 20px;
     border-radius: 2px;
 }
 
