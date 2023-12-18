@@ -14,6 +14,9 @@
     --body-copy: 3.5vw;
     --body-copy-line-height: calc(var(--body-copy)*1.3);
 
+    --media-copy: 2vw;
+    --media-copy-line-height:calc(var(--media-copy)*1.2);
+
     --desktop-copy:0.9vw;
     --desktop-copy-line-height:calc(var(--desktop-copy)*1.2);
 
@@ -66,12 +69,11 @@ a:hover{
     grid-template-columns: repeat(var(--columns),1fr);
     gap: var(--grid-gap);
     margin-bottom: 150px;
-    padding-top: 10px;
 }
 
 .work img
 {
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 2px;
 }
 
@@ -91,8 +93,24 @@ figcaption
 
 /*media query*/
 /*mobile & ipad*/
-@media screen and (min-width: 481px) and (max-width: 768px)
+@media screen and (min-width: 481px) and (max-width: 1023px)
 {
+    body
+    {
+        font-size: var(--media-copy);
+        line-height: var(--media-copy-line-height);
+    }
+
+    .description
+    {
+        width: 70%;
+    }
+
+    .work
+    {
+        --columns: 2;
+    }
+
     .workdesktop
     {
         display: none;
