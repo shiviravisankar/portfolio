@@ -47,9 +47,13 @@ body
     text-transform: uppercase;
 }
 
+.about p
+{
+    margin-bottom: 10px;
+}
+
 .links
 {
-    margin-top: 20px;
     margin-bottom: 20px;
 }
 
