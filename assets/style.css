@@ -47,13 +47,14 @@ body
     text-transform: uppercase;
 }
 
-.about p
+.empty p
 {
     margin-bottom: 10px;
 }
 
 .links
 {
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -135,6 +136,11 @@ figcaption
         flex-direction: row;
         margin-top: 50px;
         gap: calc(var(--grid-gap)*2);
+    }
+
+        .empty p
+    {
+        margin-bottom: 15px;
     }
 
     .links
