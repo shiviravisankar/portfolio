@@ -47,6 +47,9 @@ body
     color: white;
     text-transform: uppercase;
     margin-top: 50px;
+    position: sticky;
+    top: 50px;
+    z-index: -1;
 }
 
 h1{
@@ -79,11 +82,12 @@ a:hover{
     display: grid;
     grid-template-columns: repeat(var(--columns),1fr);
     gap: var(--grid-gap);
+    background-color: #1f1f1f;
 }
 
 .work img
 {
-    margin-top: 10px;
+    margin-top: 15px;
     border-radius: 3px;
 }
 
@@ -134,7 +138,6 @@ figcaption
     {
         font-size: var(--desktop-copy);
         line-height: var(--desktop-copy-line-height);
-        width: 95%;
     }
 
     .content{
@@ -148,11 +151,6 @@ figcaption
         gap: calc(var(--grid-gap)*0.1);
     }
 
-    .links
-    {
-        margin: 0;
-    }
-
     .work{
         display: none;
     }
@@ -162,7 +160,9 @@ figcaption
         --columns: 3;
         display: grid;
         grid-template-columns: repeat(var(--columns),1fr);
-        gap: calc(var(--grid-gap)*1.7);
+        gap: calc(var(--grid-gap)*1.5);
+        margin-top: 50px;
+        padding-right: 70px;
     }
 
     img
