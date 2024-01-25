@@ -37,31 +37,37 @@ body
     line-height: var(--body-copy-line-height);
 }
 
+.content
+{
+    margin-bottom: 150px;
+}
+
 .description
 {
-    display: grid;
-    grid-template-columns: repeat(var(--columns),1fr);
-    gap: calc(var(--grid-gap)/2.5);
     color: white;
-    margin-top: 50px;
     text-transform: uppercase;
+    margin-top: 50px;
 }
 
-.empty p
+h1{
+    margin-bottom: 20px;
+}
+
+.description p
 {
     margin-bottom: 10px;
-}
-
-.links
-{
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 a
 {
     color: #3dff50;
     text-transform: uppercase;
+}
+
+.links
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 a:hover{
@@ -73,7 +79,6 @@ a:hover{
     display: grid;
     grid-template-columns: repeat(var(--columns),1fr);
     gap: var(--grid-gap);
-    margin-bottom: 150px;
 }
 
 .work img
@@ -129,18 +134,18 @@ figcaption
     {
         font-size: var(--desktop-copy);
         line-height: var(--desktop-copy-line-height);
-    }
-    .description
-    {
-        --columns: 4;
-        flex-direction: row;
-        margin-top: 50px;
-        gap: calc(var(--grid-gap)*2);
+        width: 95%;
     }
 
-        .empty p
+    .content{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    
+    .description
     {
-        margin-bottom: 15px;
+        --columns: 1;
+        gap: calc(var(--grid-gap)*0.1);
     }
 
     .links
@@ -154,12 +159,10 @@ figcaption
 
     .workdesktop
     {
-        --columns: 4;
-        margin-top: 50px;
+        --columns: 3;
         display: grid;
         grid-template-columns: repeat(var(--columns),1fr);
-        gap: calc(var(--grid-gap)*2);
-        margin-bottom: 150px;
+        gap: calc(var(--grid-gap)*1.7);
     }
 
     img
@@ -175,7 +178,6 @@ figcaption
 
     figcaption
     {
-        margin-top: 10px;
         width: 100%;
     }
 }
