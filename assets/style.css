@@ -1,12 +1,20 @@
 /*fonts*/
 @font-face 
 {
-    font-family: 'geist_monolight';
-    src: url('../assets/fonts/geistmono-light-webfont.woff2') format('woff2'),
-         url('../assets/fonts/geistmono-light-webfont.woff') format('woff');
+    font-family: 'geist_monoregular';
+    src: url('../assets/fonts/geistmono-regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/geistmono-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-face 
+{
+    font-family: 'geist_monobold';
+    src: url('../assets/fonts/geistmono-bold-webfont.woff2') format('woff2'),
+         url('../assets/fonts/geistmono-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 :root
@@ -17,8 +25,8 @@
     --media-copy: 2vw;
     --media-copy-line-height:calc(var(--media-copy)*1.2);
 
-    --desktop-copy:0.9vw;
-    --desktop-copy-line-height:calc(var(--desktop-copy)*1.2);
+    --desktop-copy:1vw;
+    --desktop-copy-line-height:calc(var(--desktop-copy)*1.3);
 
     --columns: 1;
     --grid-gap: 1.5em;
@@ -31,50 +39,40 @@ body
     width: 90%;
     margin: auto;
     padding: auto;
-    font-family: 'geist_monolight';
-    background-color: #1f1f1f;
+    font-family: 'geist_monoregular';
+    background-color: #FEFEFE;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
 }
 
-.content
-{
-    margin-bottom: 22vh;
-}
-
 .description
 {
-    color: white;
+    color: #1A1C1D;
+    display: grid;
+    grid-template-columns: repeat(var(--columns),1fr);
+    gap: var(--grid-gap);
     text-transform: uppercase;
     margin-top: 7vh;
     position: sticky;
     top: 7vh;
-    z-index: 1;
 }
 
-h1{
-    margin-bottom: 20px;
-}
-
-.description p
+.empty
 {
-    margin-bottom: 10px;
+    display: none;
 }
 
 a
 {
-    color: #3dff50;
-    text-transform: uppercase;
-}
-
-.links
-{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    font-family: 'geist_monobold';
+    color: #1A1C1D;
+    padding: 2px;
 }
 
 a:hover{
-    color: #ea34fe;
+    color: #1A1C1D;
+    background-color: #FFFF00;
+    border: none;
 }
 
 .work
@@ -82,9 +80,10 @@ a:hover{
     display: grid;
     grid-template-columns: repeat(var(--columns),1fr);
     gap: var(--grid-gap);
-    background-color: #1f1f1f;
+    background-color: #FEFEFE;
     z-index: 99;
     position: relative;
+    margin-bottom: 22vh;
 }
 
 .work img
@@ -96,15 +95,17 @@ a:hover{
 .workdesktop
 {
     display: none;
+    margin-bottom: 22vh;
 }
 
 
 figcaption
 {
-    color: white;
+    color: #1A1C1D;
     margin: auto;
     padding: auto;
     margin-top: 5px;
+    text-transform: uppercase;
 }
 
 /*media query*/
@@ -138,13 +139,19 @@ figcaption
 {
     body
     {
+        width: 95%;
         font-size: var(--desktop-copy);
         line-height: var(--desktop-copy-line-height);
     }
 
-    .content{
-        display: flex;
-        flex-direction: row-reverse;
+    .description
+    {
+        --columns: 4;
+    }
+
+    .empty
+    {
+        display: block;
     }
 
 
@@ -152,38 +159,29 @@ figcaption
         display: none;
     }
 
-    .description
-    {
-        position: fixed;
-        width: 25%;
-        margin-top: 0;
-    }
-
     .workdesktop
     {
-        width: 70%;
-        --columns: 3;
+        --columns: 2;
         display: grid;
         grid-template-columns: repeat(var(--columns),1fr);
         gap: calc(var(--grid-gap)*1.5);
         margin-top: 7vh;
-        margin-right: 33%;
+        position: relative;
+        z-index: 99;
+        background-color:#FEFEFE;
+
     }
 
     img
     {
         transition: all 1s ease-out;
-        border-radius: 5px;
-    }
-
-    img:hover
-    {
-        transform: scale(1.4);
+        border-radius: 7px;
     }
 
     figcaption
     {
-        width: 100%;
+        margin: 0;
+        width: 80%;
         margin-bottom: 2vh;
     }
 }
