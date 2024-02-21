@@ -63,14 +63,15 @@ body
     display: none;
 }
 
-a
+.description a
 {
     font-family: 'geist_monobold';
     color: #1A1C1D;
     padding: 2px;
 }
 
-a:hover{
+.description a:hover
+{
     color: #1A1C1D;
     background-color: #FFFF00;
     border: none;
