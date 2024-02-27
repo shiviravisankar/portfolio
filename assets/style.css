@@ -72,8 +72,8 @@ body
 
 .description a:hover
 {
-    color: #FFFFFF;
-    background-color: #EA34F6;
+    color: #000000;
+    background-color: #FFFF00;
     border: none;
 }
 
@@ -142,7 +142,7 @@ figcaption
 {
     body
     {
-        width: 95%;
+        width: 90%;
         font-size: var(--desktop-copy);
         line-height: var(--desktop-copy-line-height);
     }
@@ -167,18 +167,17 @@ figcaption
         --columns: 2;
         display: grid;
         grid-template-columns: repeat(var(--columns),1fr);
-        gap: calc(var(--grid-gap)*1.5);
-        margin-top: 7vh;
+        gap: calc(var(--grid-gap)*1.3);
+        margin-top: 15vh;
         position: relative;
         z-index: 99;
         background-color:#FEFEFE;
-
     }
 
     img
     {
         transition: all 1s ease-out;
-        border-radius: 7px;
+        border-radius: 5px;
     }
 
     figcaption
