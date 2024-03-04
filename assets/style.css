@@ -167,7 +167,7 @@ figcaption
         --columns: 4;
         display: grid;
         grid-template-columns: repeat(var(--columns),1fr);
-        gap: calc(var(--grid-gap)*1.3);
+        gap: calc(var(--grid-gap)*1.5);
         margin-top: 7vh;
         position: relative;
         z-index: 99;
@@ -178,6 +178,11 @@ figcaption
     {
         transition: all 1s ease-out;
         border-radius: 5px;
+    }
+
+    img:hover
+    {
+        transform: scale(1.3);
     }
 
     figcaption
