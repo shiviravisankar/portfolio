@@ -167,7 +167,7 @@ figcaption
         --columns: 4;
         display: grid;
         grid-template-columns: repeat(var(--columns),1fr);
-        gap: calc(var(--grid-gap)*1.5);
+        gap: calc(var(--grid-gap)*1);
         margin-top: 7vh;
         position: relative;
         z-index: 99;
@@ -189,6 +189,6 @@ figcaption
     {
         margin: 0;
         width: 100%;
-        margin-bottom: 2vh;
+        margin-bottom: 1vh;
     }
 }
