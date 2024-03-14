@@ -1,9 +1,9 @@
 /*fonts*/
 @font-face 
 {
-    font-family: 'maison_neuebook';
-    src: url('../assets/fonts/maisonneue-book-webfont.woff2') format('woff2'),
-         url('../assets/fonts/maisonneue-book-webfont.woff') format('woff');
+    font-family: 'Victor Mono';
+    src: url('../assets/fonts/VictorMono-Medium.woff2') format('woff2'),
+         url('../assets/fonts/VictorMono-Medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -11,10 +11,10 @@
 
 @font-face 
 {
-    font-family: 'maison_neuedemi';
-    src: url('../assets/fonts/maisonneue-demi-webfont.woff2') format('woff2'),
-         url('../assets/fonts/maisonneue-demi-webfont.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Victor Mono';
+    src: url('../assets/fonts/VictorMono-Bold.woff2') format('woff2'),
+         url('../assets/fonts/VictorMono-Bold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
 
 }
@@ -41,11 +41,10 @@ body
     width: 90%;
     margin: auto;
     padding: auto;
-    font-family: 'maison_neuebook';
+    font-family: 'Victor Mono';
     background-color: #FEFEFE;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
-    text-transform: uppercase;
 }
 
 .description
@@ -67,9 +66,10 @@ body
 
 .description a
 {
-    font-family: 'maison_neuedemi';
+    font-weight: bold;
     color: #1A1C1D;
     padding: 2px;
+    text-transform: uppercase;
 }
 
 .description a:hover
@@ -193,5 +193,6 @@ figcaption
         margin: 0;
         width: 100%;
         margin-top: 5px;
+        margin-bottom: 1vh;
     }
 }
