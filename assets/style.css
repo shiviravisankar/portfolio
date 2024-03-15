@@ -1,22 +1,22 @@
 /*fonts*/
 @font-face 
 {
-    font-family: 'Victor Mono';
-    src: url('../assets/fonts/VictorMono-Medium.woff2') format('woff2'),
-         url('../assets/fonts/VictorMono-Medium.woff') format('woff');
+    font-family: 'IBM Plex Mono';
+    src: url('../assets/fonts/IBMPlexMono-Regular.woff2') format('woff2'),
+        url('../assets/fonts/IBMPlexMono-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+    font-display: swap;
 }
 
 @font-face 
 {
-    font-family: 'Victor Mono';
-    src: url('../assets/fonts/VictorMono-Bold.woff2') format('woff2'),
-         url('../assets/fonts/VictorMono-Bold.woff') format('woff');
+    font-family: 'IBM Plex Mono';
+    src: url('../assets/fonts/IBMPlexMono-BoldItalic.woff2') format('woff2'),
+        url('../assets/fonts/IBMPlexMono-BoldItalic.woff') format('woff');
     font-weight: bold;
-    font-style: normal;
-
+    font-style: italic;
+    font-display: swap;
 }
 
 :root
@@ -41,7 +41,7 @@ body
     width: 90%;
     margin: auto;
     padding: auto;
-    font-family: 'Victor Mono';
+    font-family: 'IBM Plex Mono';
     background-color: #FEFEFE;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
@@ -67,9 +67,9 @@ body
 .description a
 {
     font-weight: bold;
+    font-style: italic;
     color: #1A1C1D;
     padding: 2px;
-    text-transform: uppercase;
 }
 
 .description a:hover
