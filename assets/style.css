@@ -83,8 +83,6 @@ body
     grid-template-columns: repeat(var(--columns),1fr);
     gap: var(--grid-gap);
     background-color: #FEFEFE;
-    z-index: 99;
-    position: relative;
     margin-bottom: 22vh;
 }
 
