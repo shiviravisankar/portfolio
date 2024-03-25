@@ -54,9 +54,6 @@ body
     grid-template-columns: repeat(var(--columns),1fr);
     gap: var(--grid-gap);
     margin-top: 7vh;
-    position: sticky;
-    top: 7vh;
-    z-index: 0;
     margin-bottom: 3vh;
 }
 
@@ -86,8 +83,6 @@ body
     grid-template-columns: repeat(var(--columns),1fr);
     gap: var(--grid-gap);
     background-color: #FEFEFE;
-    z-index: 99;
-    position: relative;
     margin-bottom: 22vh;
 }
 
@@ -173,8 +168,6 @@ figcaption
         grid-template-columns: repeat(var(--columns),1fr);
         gap: calc(var(--grid-gap));
         margin-top: 7vh;
-        position: relative;
-        z-index: 99;
         background-color:#FEFEFE;
     }
 
