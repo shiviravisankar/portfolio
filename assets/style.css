@@ -163,13 +163,34 @@ figcaption
 
     .workdesktop
     {
+        display: flex;
+        flex-direction: column;
         width: 70%;
+        margin-top: 7vh;
+        background-color:#FEFEFE;
+    }
+
+    h2
+    {
+        margin-bottom: 10px;
+        font-style: italic;
+    }
+
+    .highlights
+    {
         --columns: 3;
         display: grid;
         grid-template-columns: repeat(var(--columns),1fr);
         gap: calc(var(--grid-gap));
-        margin-top: 7vh;
-        background-color:#FEFEFE;
+        margin-bottom: 50px;
+    }
+
+    .projects
+    {
+        --columns: 3;
+        display: grid;
+        grid-template-columns: repeat(var(--columns),1fr);
+        gap: calc(var(--grid-gap));
     }
 
     img
