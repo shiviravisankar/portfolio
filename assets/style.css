@@ -47,19 +47,21 @@ body
     line-height: var(--body-copy-line-height);
 }
 
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
 .description
 {
     color: #1A1C1D;
-    display: grid;
-    grid-template-columns: repeat(var(--columns),1fr);
-    gap: var(--grid-gap);
     margin-top: 7vh;
     margin-bottom: 3vh;
 }
 
-.empty
+.description p
 {
-    display: none;
+    margin-top: 15px;
 }
 
 .description a
@@ -67,7 +69,6 @@ body
     font-weight: bold;
     font-style: italic;
     color: #1A1C1D;
-    padding: 2px;
 }
 
 .description a:hover
@@ -144,16 +145,9 @@ figcaption
         line-height: var(--desktop-copy-line-height);
     }
 
-    .description
+    .content
     {
-        --columns: 4;
-        line-height: calc(var(--desktop-copy-line-height)*1.2);
-        padding-right: 2.1px;
-    }
-
-    .empty
-    {
-        display: block;
+        flex-direction: row;
     }
 
 
@@ -163,7 +157,7 @@ figcaption
 
     .workdesktop
     {
-        --columns: 4;
+        --columns: 3;
         display: grid;
         grid-template-columns: repeat(var(--columns),1fr);
         gap: calc(var(--grid-gap));
