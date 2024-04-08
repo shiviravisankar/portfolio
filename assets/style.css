@@ -150,6 +150,12 @@ figcaption
         flex-direction: row;
     }
 
+    .description
+    {
+        width: 30%;
+        padding-right: 50px;
+    }
+
 
     .work{
         display: none;
@@ -157,6 +163,7 @@ figcaption
 
     .workdesktop
     {
+        width: 70%;
         --columns: 3;
         display: grid;
         grid-template-columns: repeat(var(--columns),1fr);
