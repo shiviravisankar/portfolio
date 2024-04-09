@@ -1,19 +1,19 @@
 /*fonts*/
 @font-face 
 {
-    font-family: 'IBM Plex Mono';
-    src: url('../assets/fonts/IBMPlexMono-Regular.woff2') format('woff2'),
-        url('../assets/fonts/IBMPlexMono-Regular.woff') format('woff');
-    font-weight: normal;
+    font-family: 'JetBrains Mono';
+    src: url('../assets/fonts/JetBrainsMono-Light.woff2') format('woff2'),
+        url('../assets/fonts/JetBrainsMono-Light.woff') format('woff');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face 
 {
-    font-family: 'IBM Plex Mono';
-    src: url('../assets/fonts/IBMPlexMono-BoldItalic.woff2') format('woff2'),
-        url('../assets/fonts/IBMPlexMono-BoldItalic.woff') format('woff');
+    font-family: 'JetBrains Mono';
+    src: url('../assets/fonts/JetBrainsMono-BoldItalic.woff2') format('woff2'),
+        url('../assets/fonts/JetBrainsMono-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -41,7 +41,7 @@ body
     width: 90%;
     margin: auto;
     padding: auto;
-    font-family: 'IBM Plex Mono';
+    font-family: "JetBrains Mono", monospace;
     background-color: #FEFEFE;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
@@ -173,7 +173,6 @@ figcaption
     h2
     {
         margin-bottom: 10px;
-        font-style: italic;
     }
 
     .highlights
