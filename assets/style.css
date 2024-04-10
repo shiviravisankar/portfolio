@@ -76,6 +76,7 @@ body
     color: #000000;
     background-color: #FFFF00;
     border: none;
+    padding: 3px;
 }
 
 .work
@@ -156,40 +157,62 @@ figcaption
         padding-right: 50px;
     }
 
-
-    .work{
-        display: none;
-    }
-
     .workdesktop
     {
         display: flex;
         flex-direction: column;
-        width: 70%;
         margin-top: 7vh;
-        background-color:#FEFEFE;
+        width: 70%;
     }
 
-    h2
+
+    .work
     {
-        margin-bottom: 10px;
+        display: none;
     }
 
-    .highlights
+    [data-tab-content] 
+    {
+        display: none;
+    }
+      
+    .active[data-tab-content] 
+    {
+    display: block;
+    }
+      
+    .tabs 
+    {
+    display: flex;
+    list-style-type: none;
+    }
+      
+    .tab 
+    {
+    cursor: pointer;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    padding: 3px;
+    }
+    
+    .tab.active 
+    {
+        background-color: #FFFF00;
+        font-weight: bold;
+    }
+    
+    .tab:hover 
+    {
+        background-color: #FFFF00;
+    }
+
+    .filter, .all
     {
         --columns: 3;
         display: grid;
         grid-template-columns: repeat(var(--columns),1fr);
         gap: calc(var(--grid-gap));
         margin-bottom: 50px;
-    }
-
-    .projects
-    {
-        --columns: 3;
-        display: grid;
-        grid-template-columns: repeat(var(--columns),1fr);
-        gap: calc(var(--grid-gap));
     }
 
     img
