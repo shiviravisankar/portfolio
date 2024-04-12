@@ -29,7 +29,7 @@ tabs.forEach(tab => {
 })
 
 // Define an array of colors
-var colors = ['#FF5EA0', '#FAD914', '#70EBE8', '#3DD4E9', '#D6E715', '#FF6D64', '#84FA67'];
+var colors = ['#FF5EA0', '#FAD914', '#70EBE8', '#3DD4E9', '#D6E715', '#FF6D64', '#84FA67', '#E990FF'];
 
 // Function to apply randomization logic
 function applyRandomColor(element) {
