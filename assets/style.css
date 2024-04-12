@@ -12,10 +12,10 @@
 @font-face 
 {
     font-family: 'JetBrains Mono';
-    src: url('../assets/fonts/JetBrainsMono-BoldItalic.woff2') format('woff2'),
-        url('../assets/fonts/JetBrainsMono-BoldItalic.woff') format('woff');
+    src: url('../assets/fonts/JetBrainsMono-Bold.woff2') format('woff2'),
+        url('../assets/fonts/JetBrainsMono-Bold.woff') format('woff');
     font-weight: bold;
-    font-style: italic;
+    font-style: normal;
     font-display: swap;
 }
 
@@ -67,14 +67,12 @@ body
 .description a
 {
     font-weight: bold;
-    font-style: italic;
     color: #1A1C1D;
 }
 
 .description a:hover
 {
-    color: #000000;
-    background-color: #FFFF00;
+    background-color: #FF168A;
     border: none;
     padding: 3px;
 }
@@ -161,7 +159,7 @@ figcaption
     {
         display: flex;
         flex-direction: column;
-        margin-top: 7vh;
+        margin-top: 6.5vh;
         width: 70%;
     }
 
@@ -197,13 +195,12 @@ figcaption
     
     .tab.active 
     {
-        background-color: #FFFF00;
         font-weight: bold;
     }
-    
-    .tab:hover 
+
+    .tab:hover
     {
-        background-color: #FFFF00;
+        font-weight: bold;
     }
 
     .filter, .all
