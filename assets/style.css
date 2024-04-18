@@ -57,19 +57,9 @@ body
     display: none;
 }
 
-h1
+.text p
 {
-    margin-bottom: 10px;
-}
-
-ul
-{
-    list-style-type: disc;
-    margin-left: 10px;
-}
-
-li{
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 .links
@@ -77,15 +67,15 @@ li{
     margin-top: 50px;
 }
 
+.links p
+{
+    margin-bottom: 5px;
+}
+
 .description
 {
     color: #1A1C1D;
     margin-top: 7vh;
-}
-
-.description p
-{
-    margin-top: 5px;
 }
 
 .description a
@@ -180,8 +170,7 @@ figcaption
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 32%;
-        padding-right: 50px;
+        width: 30%;
         margin-right: 21%;
     }
 
@@ -196,7 +185,7 @@ figcaption
     {
         display: flex;
         flex-direction: column;
-        margin-top: 8vh;
+        margin-top: 7vh;
         margin-bottom: 20vh;
     }
 
