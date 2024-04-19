@@ -1,20 +1,18 @@
 /*fonts*/
-@font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: url('../assets/fonts/NeueHaasDisplay-Roman.woff2') format('woff2'),
-        url('../assets/fonts/NeueHaasDisplay-Roman.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
+.inputsansnarrowlight 
+{
+    font-family: "Input Sans Nar Lt";
     font-display: swap;
+    font-style: normal;
+    font-weight: normal;
 }
 
-@font-face {
-    font-family: 'Neue Haas Grotesk Display Pro';
-    src: url('../assets/fonts/NeueHaasDisplay-Mediu.woff2') format('woff2'),
-        url('../assets/fonts/NeueHaasDisplay-Mediu.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+.inputsansnarrowbold 
+{
+    font-family: "Input Sans Nar Bd";
     font-display: swap;
+    font-style: normal;
+    font-weight: normal;
 }
 
 :root
@@ -39,12 +37,10 @@ body
     width: 90%;
     margin: auto;
     padding: auto;
-    font-family: 'Neue Haas Grotesk Display Pro';
-    font-weight: 500;
+    font-family: "Input Sans Nar Lt";
     background-color: #FEFEFE;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
-    letter-spacing: 0.7px;
 }
 
 .content{
@@ -80,13 +76,13 @@ body
 
 .description a
 {
-    font-weight: normal;
-    color: #1A1C1D;
+    font-family: "Input Sans Nar Bd";
+    padding: 5px 0px 3px 0px;
 }
 
 .description a:hover
 {
-    text-transform: uppercase;
+    border-bottom: 1px solid black;
 }
 
 .links
@@ -117,7 +113,6 @@ body
 
 figcaption
 {
-    color: #1A1C1D;
     margin: auto;
     padding: auto;
     margin-top: 5px;
@@ -214,8 +209,7 @@ figcaption
     .tab
     {
     cursor: pointer;
-    padding: 5px 15px 5px 15px;
-    border-radius: 5px;
+    padding: 5px 0px 3px 0px;
     margin-right: 30px;
     margin-bottom: 15px;
     }
@@ -227,15 +221,13 @@ figcaption
     
     .tab.active
     {
-        font-weight: normal;
-        border: 1px solid black;
-        text-transform: uppercase;
+        font-family: "Input Sans Nar Bd";
+        border-bottom: 1px solid black;
     }
 
     .tab:hover
     {
-        text-transform: uppercase;
-        border: 1px solid black;
+        border-bottom: 1px solid black;
     }
 
     .filter, .all
