@@ -165,8 +165,8 @@ figcaption
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 30%;
-        margin-right: 21%;
+        width: 25%;
+        margin-right: 26%;
     }
 
     .main
