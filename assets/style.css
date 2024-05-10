@@ -153,8 +153,8 @@ figcaption
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 40%;
-        margin-right: 20%;
+        width: 45%;
+        margin-right: 10%;
     }
 
     .work, .code, .ai
@@ -165,7 +165,7 @@ figcaption
     .photo
     {
         display: flex;
-        width: 40%;
+        width: 30%;
     }
 
     .three p
