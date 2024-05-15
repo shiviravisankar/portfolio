@@ -339,12 +339,23 @@ h3
 
     .scroller 
     {
-        margin-top: 4vh;
+        margin-top: 3vh;
+    }
+
+    .scroller[data-animated="true"] .scroller__inner 
+    {
+        width: 500vw;
+    }
+
+    .scroller__inner
+    {
+        gap: 0.5rem;
     }
 
     .scroller__inner img
     {
         transform: none;
+        border-radius: 2px;
     }
 
     #landing
