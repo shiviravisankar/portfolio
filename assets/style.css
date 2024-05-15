@@ -313,38 +313,55 @@ h3
     margin-top: 30px;
 }
 
-img
+.webpage img, .code img, .ai img, .scroller__inner img
 {
     border-radius: 5px;
 }
 
+
 /*Media Query*/
 @media screen and (max-width: 481px)
 {
-    .navdesktop
+    .top, .navdesktop
     {
         display: none;
     }
 
     .herosection
     {
-        width: 90%;
+        width: 80%;
     }
 
-    svg
+    .herosection img
+    {
+        width: 10%;
+    }
+
+    .scroller 
+    {
+        margin-top: 4vh;
+    }
+
+    .scroller__inner img
     {
         width: 50%;
-        height: 50%;
+    }
+
+    #landing
+    {
+        padding-top: 7vh;
     }
 
     #about
     {
         width: 90%;
+        padding-top: 7vh;
     }
 
     .content
     {
         flex-direction: column;
+        margin-top: 5vh;
     }
     
     .left, .right
@@ -358,12 +375,24 @@ img
     {
         font-size: calc(var(--hero-copy)/2);
         line-height: calc(var(--hero-copy-line-height)/2);
+        text-align: left;
     }
 
     h2
     {
         font-size: calc(var(--title)/2);
         line-height: calc(var(--title-line-height)/2);
+    }
+
+    .line
+    {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #projects h3
+    {
+        margin-top: 50px;
     }
 
     .webpage, .code, .ai
@@ -374,6 +403,7 @@ img
     #projects
     {
         width: 90%;
+        padding-top: 7vh;
     }
 
     figcaption
