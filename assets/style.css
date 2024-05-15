@@ -329,7 +329,7 @@ h3
 
     .herosection
     {
-        width: 80%;
+        width: 85%;
     }
 
     .herosection img
@@ -344,7 +344,7 @@ h3
 
     .scroller__inner img
     {
-        width: 50%;
+        transform: none;
     }
 
     #landing
@@ -375,7 +375,6 @@ h3
     {
         font-size: calc(var(--hero-copy)/2);
         line-height: calc(var(--hero-copy-line-height)/2);
-        text-align: left;
     }
 
     h2
