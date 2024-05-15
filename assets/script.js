@@ -54,3 +54,23 @@ function addAnimation() {
     });
   });
 }
+
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Get the active link on page load
+const activeLink = document.querySelector('.nav-link.active');
+
+// Apply active styles to the active link
+if (activeLink) {
+  activeLink.classList.add('active');
+}
+
+navLinks.forEach(link => {
+  link.addEventListener('click', function() {
+    // Remove 'active' class from all links
+    navLinks.forEach(link => link.classList.remove('active'));
+
+    // Add 'active' class to the clicked link
+    this.classList.add('active');
+  });
+});
