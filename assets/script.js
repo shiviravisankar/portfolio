@@ -1,34 +1,33 @@
-function gifOn(img) 
-{
-    let gif = img.getAttribute('data-gif');
-    img.src = gif; 
-}
-  
-function gifOff(img) 
-{
-let png = img.src;
-png = png.replace('.gif', '.png');   
-img.src = png;
+function gifOn(img) {
+  let gif = img.getAttribute('data-gif');
+  img.src = gif;
 }
 
-const tabs = document.querySelectorAll('[data-tab-target]')
-const tabContents = document.querySelectorAll('[data-tab-content]')
+function gifOff(img) {
+  let png = img.src;
+  png = png.replace('.gif', '.png');
+  img.src = png;
+}
+
+const tabs = document.querySelectorAll('[data-tab-target]');
+const tabContents = document.querySelectorAll('[data-tab-content]');
 
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
-    const target = document.querySelector(tab.dataset.tabTarget)
+    const target = document.querySelector(tab.dataset.tabTarget);
     tabContents.forEach(tabContent => {
-      tabContent.classList.remove('active')
-    })
+      tabContent.classList.remove('active');
+    });
     tabs.forEach(tab => {
-      tab.classList.remove('active')
-    })
-    tab.classList.add('active')
-    target.classList.add('active')
-  })
-})
+      tab.classList.remove('active');
+    });
+    tab.classList.add('active');
+    target.classList.add('active');
+  });
+});
 
 const scrollers = document.querySelectorAll(".scroller");
+
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   addAnimation();
 }
@@ -66,3 +65,32 @@ function myFunction() {
   copyText.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(copyText.value);
 }
+
+// Function to update the active navigation link based on scroll position
+function updateActiveLink() {
+  const scrollPosition = window.scrollY;
+
+  // Get all the section elements
+  const sections = document.querySelectorAll('section');
+
+  // Loop through each section
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    // Check if the current scroll position is within the section's boundaries
+    if (scrollPosition >= sectionTop - 100 && scrollPosition < sectionTop + sectionHeight - 100) {
+      const sectionId = section.getAttribute('id');
+      const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+
+      // Remove 'active' class from all navigation links
+      navLinks.forEach(link => link.classList.remove('active'));
+
+      // Add 'active' class to the corresponding navigation link
+      activeLink.classList.add('active');
+    }
+  });
+}
+
+// Add event listener for scroll
+window.addEventListener('scroll', updateActiveLink);
