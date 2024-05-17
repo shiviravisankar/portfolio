@@ -474,6 +474,7 @@ button:hover
     {
         font-size: calc(var(--hero-copy)/1.7);
         line-height: calc(var(--hero-copy-line-height)/1.7);
+        text-align: left;
     }
 
     h2
@@ -481,6 +482,7 @@ button:hover
         font-size: calc(var(--title)/1.7);
         line-height: calc(var(--title-line-height)/1.7);
     }
+
 
     .line
     {

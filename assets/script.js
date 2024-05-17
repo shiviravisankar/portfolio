@@ -66,31 +66,23 @@ function myFunction() {
   navigator.clipboard.writeText(copyText.value);
 }
 
-// Function to update the active navigation link based on scroll position
 function updateActiveLink() {
   const scrollPosition = window.scrollY;
-
-  // Get all the section elements
   const sections = document.querySelectorAll('section');
 
-  // Loop through each section
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
 
-    // Check if the current scroll position is within the section's boundaries
     if (scrollPosition >= sectionTop - 100 && scrollPosition < sectionTop + sectionHeight - 100) {
       const sectionId = section.getAttribute('id');
       const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
 
-      // Remove 'active' class from all navigation links
       navLinks.forEach(link => link.classList.remove('active'));
 
-      // Add 'active' class to the corresponding navigation link
       activeLink.classList.add('active');
     }
   });
 }
 
-// Add event listener for scroll
 window.addEventListener('scroll', updateActiveLink);
