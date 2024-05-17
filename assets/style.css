@@ -125,7 +125,7 @@ h1
     margin-bottom: 30px;
     padding-bottom: 5px;
     text-align: center;
-    background: linear-gradient(to right, #414141, #FFFFFF 20%);
+    background: linear-gradient(to right, #414141, #FFFFFF 30%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -244,6 +244,21 @@ h2
     margin-bottom: 20px;
 }
 
+.button
+{
+    background-color: #0C0C0C;
+    width: 35%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.button:hover
+{
+    background-color: #FDFEFF;
+    color: #0C0C0C;
+}
+
 .icon2
 {
     margin-right: 20px;
@@ -318,6 +333,79 @@ h3
     border-radius: 5px;
 }
 
+/*footer*/
+.footer
+{
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+}
+
+.footer h3
+{
+    margin-bottom: 0px;
+}
+
+.footer p
+{
+    width: 25%;
+    margin-left: 21%;
+}
+
+.summary
+{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    padding-left: 15px;
+    margin-bottom: 1vh;
+}
+
+.photo img
+{
+    width: 60%;
+}
+
+.reach
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    margin-top: 5vh;
+}
+
+button
+{
+    margin-right: 30px;
+}
+
+button:hover
+{
+    opacity: 0.5;
+}
+
+.email
+{
+    display: flex;
+    align-items: center;
+    background-color: #1B1B1B;
+    border-radius: 100px;
+    padding: 10px 15px;
+    width: 85%;
+}
+
+.linkedin
+{
+    width: 9%;
+}
+
+.linkedin:hover
+{
+    opacity: 50%;
+}
+
 
 /*Media Query*/
 @media screen and (max-width: 481px)
@@ -384,14 +472,14 @@ h3
 
     h1
     {
-        font-size: calc(var(--hero-copy)/2);
-        line-height: calc(var(--hero-copy-line-height)/2);
+        font-size: calc(var(--hero-copy)/1.7);
+        line-height: calc(var(--hero-copy-line-height)/1.7);
     }
 
     h2
     {
-        font-size: calc(var(--title)/2);
-        line-height: calc(var(--title-line-height)/2);
+        font-size: calc(var(--title)/1.7);
+        line-height: calc(var(--title-line-height)/1.7);
     }
 
     .line
@@ -419,5 +507,37 @@ h3
     figcaption
     {
         margin-bottom: 5px;
+    }
+
+    .reach
+    {
+        width: 90%;
+    }
+
+    .summary
+    {
+        width: 90%;
+    }
+
+    .footer p
+    {
+        width: 80%;
+        margin: auto;
+        padding: 0;
+    }
+
+    .email
+    {
+      width: 80%;  
+    }
+
+    .linkedin
+    {
+        width: 15%;
+    }
+
+    .footer
+    {
+        padding-top: 6vh;
     }
 }
