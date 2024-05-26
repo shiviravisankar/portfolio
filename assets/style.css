@@ -529,9 +529,18 @@ button:hover
         margin-top: 50px;
     }
 
-    .webpage, .code, .ai
-    {
-        --columns: 1;
+    .webpage, .code, .ai {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--grid-gap);
+        width: 95%;
+        margin: auto;
+    }
+    
+    .webpage img, .code img, .ai img {
+        max-width: 100%;
+        max-height: none;
+        object-fit: cover;
     }
 
     #projects
