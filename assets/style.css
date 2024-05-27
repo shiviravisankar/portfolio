@@ -255,6 +255,7 @@ h2
     padding: 10px;
     text-align: center;
     border-radius: 50px;
+    margin-top: 25px;
 }
 
 .button:hover
@@ -293,7 +294,7 @@ h2
 
 .contact
 {
-    background-image: url(../assets/images/bgm.svg);
+    background-image: url(../assets/images/getintouch.png);
 }
 
 h3
