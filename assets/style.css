@@ -150,16 +150,6 @@ sub
     vertical-align: middle;
 }
 
-.herosection p
-{
-    font-size: var(--nav-copy);
-    line-height: var(--nav-copy-line-height);
-    width: 80%;
-    margin: auto;
-    padding: auto;
-    text-align: center;
-}
-
 /*image scroll*/
 .scroller 
 {
@@ -498,6 +488,10 @@ button:hover
 /*Media Query*/
 @media screen and (max-width: 481px)
 {
+    p, figcaption
+    {
+        line-height: calc(var(--body-copy-line-height)/1.2);
+    }
     .top, .navdesktop
     {
         display: none;
@@ -505,13 +499,23 @@ button:hover
 
     .herosection
     {
-        width: 75%;
+        width: 85%;
     }
 
     .herosection img
     {
-        width: 8%;
-        height: 8%;
+        width: 10%;
+        height: 10%;
+    }
+
+    sup
+    {
+        font-size: 24px;
+    }
+
+    sub
+    {
+        font-size: 18px;
     }
 
     .scroller 
@@ -550,7 +554,7 @@ button:hover
     .funfact,
     .purpose 
     {
-        padding: 3.5vh 5vh;
+        padding: 3.5vh 3.5vh;
         margin-bottom: 2vh;
     }
 
@@ -558,7 +562,7 @@ button:hover
     .education,
     .contact 
     {
-        padding: 3.5vh 5vh;
+        padding: 3.5vh 3.5vh;
         margin-bottom: 2vh;
     }
 
@@ -566,6 +570,16 @@ button:hover
     {
         flex-direction: column;
         margin-top: 5vh;
+    }
+
+    .content p
+    {
+        margin-top: 10px;
+    }
+
+    .content h1
+    {
+        font-size: var(--hero-copy);
     }
     
     .left, .right
@@ -577,8 +591,8 @@ button:hover
 
     h1
     {
-        font-size: calc(var(--hero-copy)/1.5);
-        line-height: calc(var(--hero-copy-line-height)/1.5);
+        font-size: calc(var(--hero-copy)/2.1);
+        line-height: calc(var(--hero-copy-line-height)/2.1);
     }
 
     h2
@@ -587,9 +601,15 @@ button:hover
         line-height: calc(var(--title-line-height)/1.4);
     }
 
+    h3
+    {
+        font-size: calc(var(--nav-copy)/1.1);
+        line-height: calc(var(--nav-copy-line-height)/1.1);
+    }
+
     h4
     {
-        font-size: 4vh;
+        font-size: 3.5vh;
     }
 
 
