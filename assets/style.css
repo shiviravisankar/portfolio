@@ -1,43 +1,43 @@
 /*fonts*/
 @font-face {
-    font-family: 'Graphik';
-    src: url('../assets/fonts/Graphik-Medium.woff2') format('woff2'),
-        url('../assets/fonts/Graphik-Medium.woff') format('woff');
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-Medium.woff2') format('woff2'),
+        url('../assets/fonts/Inter-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Graphik';
-    src: url('../assets/fonts/Graphik-Light.woff2') format('woff2'),
-        url('../assets/fonts/Graphik-Light.woff') format('woff');
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-Light.woff2') format('woff2'),
+        url('../assets/fonts/Inter-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Graphik';
-    src: url('../assets/fonts/Graphik-Semibold.woff2') format('woff2'),
-        url('../assets/fonts/Graphik-Semibold.woff') format('woff');
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-SemiBold.woff2') format('woff2'),
+        url('../assets/fonts/Inter-SemiBold.woff') format('woff');
     font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Graphik';
-    src: url('../assets/fonts/Graphik-Regular.woff2') format('woff2'),
-        url('../assets/fonts/Graphik-Regular.woff') format('woff');
-    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 :root
 {
-    --body-copy: 15px;
+    --body-copy: 14px;
     --body-copy-line-height: calc(var(--body-copy)*1.5);
 
     --nav-copy: 20px;
@@ -55,13 +55,17 @@
 
 body
 {
-    font-family: 'Graphik';
+    font-family: 'Inter';
     font-weight: 300;
     background-color: #0C0C0C;
     color: #FFFFFF;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
-    letter-spacing: 0.75px;
+}
+
+p, figcaption
+{
+    letter-spacing: 0.5px;
 }
 
 /*nav desktop*/
@@ -76,7 +80,7 @@ body
     right: 0;
     z-index: 1;
     padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding-bottom: 3vh;
 }
   
 .navdesktop 
@@ -129,9 +133,21 @@ h1
     text-align: center;
     font-size: var(--hero-copy);
     line-height: var(--hero-copy-line-height);
-    letter-spacing: 0px;
+    letter-spacing: -1px;
     margin-bottom: 30px;
     padding-bottom: 5px;
+}
+
+sup
+{
+    font-size: 48px;
+    vertical-align: middle;
+}
+
+sub
+{
+    font-size: 32px;
+    vertical-align: middle;
 }
 
 .herosection p
@@ -278,6 +294,11 @@ h2
     margin-right: 3.33vh;
 }
 
+.icon2 h1, .icon3 h1
+{
+    margin-bottom: 0px;
+}
+
 .education 
 {
     display: flex;
@@ -362,8 +383,8 @@ h4
 {
 flex: 0 0 auto;
 margin-right: var(--grid-gap);
-flex-basis: calc((100% - 2 * var(--grid-gap)) / 3.25);
-min-width: calc((100% - 2 * var(--grid-gap)) / 3.25);
+flex-basis: calc((100% - 2 * var(--grid-gap)) / 3.5);
+min-width: calc((100% - 2 * var(--grid-gap)) / 3.5);
 }
 
 .webpage > *:last-child, .code > *:last-child, .ai > *:last-child 
