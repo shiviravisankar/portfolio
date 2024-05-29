@@ -1,42 +1,49 @@
 /*fonts*/
-@font-face 
-{
-    font-family: 'Inter';
-    src: url('../assets/fonts/Inter-Light.woff2') format('woff2'),
-        url('../assets/fonts/Inter-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face 
-{
-    font-family: 'Inter';
-    src: url('../assets/fonts/Inter-Medium.woff2') format('woff2'),
-        url('../assets/fonts/Inter-Medium.woff') format('woff');
+@font-face {
+    font-family: 'Graphik';
+    src: url('../assets/fonts/Graphik-Medium.woff2') format('woff2'),
+        url('../assets/fonts/Graphik-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Inter';
-    src: url('../assets/fonts/Inter-SemiBold.woff2') format('woff2'),
-        url('../assets/fonts/Inter-SemiBold.woff') format('woff');
+    font-family: 'Graphik';
+    src: url('../assets/fonts/Graphik-Light.woff2') format('woff2'),
+        url('../assets/fonts/Graphik-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('../assets/fonts/Graphik-Semibold.woff2') format('woff2'),
+        url('../assets/fonts/Graphik-Semibold.woff') format('woff');
     font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('../assets/fonts/Graphik-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Graphik-Regular.woff') format('woff');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 :root
 {
-    --body-copy: 14px;
+    --body-copy: 15px;
     --body-copy-line-height: calc(var(--body-copy)*1.5);
 
     --nav-copy: 20px;
     --nav-copy-line-height: calc(var(--nav-copy)*1.2);
 
-    --hero-copy: 76.5px;
+    --hero-copy: 64px;
     --hero-copy-line-height: calc(var(--hero-copy));
 
     --title: 36px;
@@ -48,12 +55,13 @@
 
 body
 {
-    font-family: 'Inter';
+    font-family: 'Graphik';
     font-weight: 300;
     background-color: #0C0C0C;
     color: #FFFFFF;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
+    letter-spacing: 0.75px;
 }
 
 /*nav desktop*/
@@ -77,13 +85,14 @@ body
     justify-content: center;
     background-color: #1B1B1B;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 25px;
     width: 35%;
 }
   
 .nav-link 
 {
     font-size: var(--nav-copy);
+    font-weight: 400;
     color: #FFFFFF;
     text-decoration: none;
     padding: 10px;
@@ -97,14 +106,14 @@ body
 {
     background-color: #FFFFFF;
     color: #0C0C0C;
-    font-weight: 500;
+    font-weight: 400;
     border-radius: 10px;
 }
 
 /*landing*/
 .herosection
 {
-    width: 60%;
+    width: 50%;
     margin: auto;
     padding: auto;
 }
@@ -120,7 +129,7 @@ h1
     text-align: center;
     font-size: var(--hero-copy);
     line-height: var(--hero-copy-line-height);
-    letter-spacing: -2px;
+    letter-spacing: 0px;
     margin-bottom: 30px;
     padding-bottom: 5px;
 }
@@ -196,7 +205,7 @@ h2
 
 #about 
 {
-    padding-top: 18vh;
+    padding-top: 20vh;
     width: 60%;
     margin: auto;
     padding: auto;
@@ -304,7 +313,7 @@ h3
 {
     font-size: var(--nav-copy);
     line-height: var(--nav-copy-line-height);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 h4 
