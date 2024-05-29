@@ -337,6 +337,7 @@ h4
 #projects h3
 {
     margin-top: 70px;
+    margin-bottom: 30px;
 }
 
 .line
@@ -483,12 +484,13 @@ button:hover
 
     .herosection
     {
-        width: 85%;
+        width: 75%;
     }
 
     .herosection img
     {
-        width: 10%;
+        width: 8%;
+        height: 8%;
     }
 
     .scroller 
@@ -520,7 +522,23 @@ button:hover
     #about
     {
         width: 90%;
-        padding-top: 7vh;
+        padding-top: 3vh;
+    }
+
+    .blurb,
+    .funfact,
+    .purpose 
+    {
+        padding: 3.5vh 5vh;
+        margin-bottom: 2vh;
+    }
+
+    .location,
+    .education,
+    .contact 
+    {
+        padding: 3.5vh 5vh;
+        margin-bottom: 2vh;
     }
 
     .content
@@ -538,15 +556,19 @@ button:hover
 
     h1
     {
-        font-size: calc(var(--hero-copy)/1.7);
-        line-height: calc(var(--hero-copy-line-height)/1.7);
-        text-align: left;
+        font-size: calc(var(--hero-copy)/1.5);
+        line-height: calc(var(--hero-copy-line-height)/1.5);
     }
 
     h2
     {
-        font-size: calc(var(--title)/1.7);
-        line-height: calc(var(--title-line-height)/1.7);
+        font-size: calc(var(--title)/1.4);
+        line-height: calc(var(--title-line-height)/1.4);
+    }
+
+    h4
+    {
+        font-size: 4vh;
     }
 
 
@@ -578,7 +600,7 @@ button:hover
     #projects
     {
         width: 90%;
-        padding-top: 7vh;
+        padding-top: 3vh;
     }
 
     figcaption
