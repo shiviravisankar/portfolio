@@ -437,7 +437,7 @@ max-width: 100%;
 
 
 /*Media Query*/
-@media screen and (max-width: 481px)
+@media screen and (max-width: 478px)
 {
     p, figcaption
     {
@@ -590,35 +590,34 @@ max-width: 100%;
         margin-bottom: 5px;
     }
 
-    .reach
+    .footer
     {
+        padding-top: 6vh;
         width: 90%;
+    }
+
+    .footer h2
+    {
+        font-size: calc(var(--title)/2);
+    }
+
+    .photo
+    {
+        width: 14%;
     }
 
     .summary
     {
-        width: 90%;
+        width: 73%;
     }
 
-    .footer p
+    img
     {
-        width: 80%;
-        margin: auto;
-        padding: 0;
-    }
-
-    .email
-    {
-      width: 80%;  
+        transform: none;
     }
 
     .linkedin
     {
         width: 15%;
-    }
-
-    .footer
-    {
-        padding-top: 6vh;
     }
 }
