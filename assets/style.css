@@ -1,5 +1,30 @@
 /*fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'Graphik';
+    src: url('../assets/fonts/Graphik-Medium.woff2') format('woff2'),
+        url('../assets/fonts/Graphik-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('../assets/fonts/Graphik-Semibold.woff2') format('woff2'),
+        url('../assets/fonts/Graphik-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('../assets/fonts/Graphik-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Graphik-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root
 {
@@ -9,7 +34,7 @@
     --nav-copy: 16px;
     --nav-copy-line-height: calc(var(--nav-copy)*1.2);
 
-    --hero-copy: 85.15px;
+    --hero-copy: 76px;
     --hero-copy-line-height: calc(var(--hero-copy));
 
     --title: 36px;
@@ -21,13 +46,13 @@
 
 body
 {
-    font-family: "Urbanist", sans-serif;
+    font-family: 'Graphik', sans-serif;
     font-weight: 400;
     background-color: #131313;
     color: #FDFEFF;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 p, figcaption
@@ -103,7 +128,7 @@ img:hover
 
 h1
 {
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
     font-size: var(--hero-copy);
     line-height: var(--hero-copy-line-height);
@@ -299,7 +324,7 @@ h3
 {
     font-size: var(--nav-copy);
     line-height: var(--nav-copy-line-height);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 h4 
