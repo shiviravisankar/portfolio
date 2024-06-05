@@ -201,7 +201,7 @@ to
 /*intro*/
 h2
 {
-    font-weight: 500;
+    font-weight: 400;
     font-size: var(--title);
     line-height: var(--title-line-height);
     text-align: center;
