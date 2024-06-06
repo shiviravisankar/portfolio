@@ -28,13 +28,13 @@
 :root
 {
     --body-copy: 16px;
-    --body-copy-line-height: calc(var(--body-copy)*1.3);
+    --body-copy-line-height: calc(var(--body-copy)*1.1);
 
     --nav-copy: 19px;
     --nav-copy-line-height: calc(var(--nav-copy)*1.2);
 
     --hero-copy: 85.15px;
-    --hero-copy-line-height: calc(var(--hero-copy));
+    --hero-copy-line-height: calc(var(--hero-copy)*0.9);
 
     --title: 40px;
     --title-line-height: calc(var(--title)*1.1);
