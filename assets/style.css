@@ -192,8 +192,13 @@ h2
     font-weight: 400;
     font-size: var(--title);
     line-height: var(--title-line-height);
-    width: 75%;
     text-align: center;
+}
+
+#about h2, #projects h2
+{
+    width: 75%;
+    margin: auto;
 }
 
 #about 
