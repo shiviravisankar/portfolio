@@ -1,0 +1,129 @@
+:root
+{
+    --body-copy: 14px;
+    --body-copy-line-height: calc(var(--body-copy)*1.4);
+
+    --hero-copy: 28px;
+    --hero-copy-line-height: calc(var(--hero-copy)*1.2);
+}
+
+body
+{
+    font-family: 'General Sans', sans-serif;
+    font-weight: 400;
+    font-size: var(--body-copy);
+    line-height: var(--body-copy-line-height);
+}
+
+.text
+{
+    width: 63%;
+    margin: auto;
+    margin-top: 7vh;
+    margin-bottom: 10vh;
+}
+
+.intro
+{
+    display: flex;
+    margin-bottom: 7vh;
+}
+
+.overview
+{
+    margin-right: 8%;
+}
+
+.about
+{
+    margin-bottom: 20px;
+}
+
+.line
+{
+    border: 0.8px solid #E8E8E8;
+    margin-bottom: 30px;
+}
+
+h1
+{
+    font-size: var(--hero-copy);
+    line-height: var(--hero-copy-line-height);
+    font-weight: 600;
+}
+
+h2
+{
+    font-size: calc(var(--hero-copy)*0.7);
+    line-height: var(--hero-copy-line-height);
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #0099DE;
+}
+
+h3
+{
+    color: #999999;
+    margin-bottom: 5px;
+}
+
+h4
+{
+    font-weight: 500;
+    color: #999999;
+}
+
+h5
+{
+    font-size: 24px;
+    margin-right: 5%;
+}
+
+.current
+{
+    display: flex;
+}
+
+.users
+{
+    padding-top: 7vh;
+}
+
+ul
+{
+    list-style-type: disc;
+}
+
+.block, .persona, .audience
+{
+    display: flex;
+}
+
+.audience
+{
+    flex: 50%;
+    margin-right: 5%;
+}
+
+.persona
+{
+    flex: 50%;
+}
+
+.audience, .persona
+{
+    background-color: #F9F9F9;
+    padding: 40px 50px;
+    border-radius: 25px;
+}
+
+.block p
+{
+    margin-top: 20px;
+}
+
+.quote
+{
+    margin-top: 10vh;
+    text-align: center;
+}
