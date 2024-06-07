@@ -16,15 +16,6 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'TT Commons';
-    src: url('../assets/font/TTCommons-Medium.woff2') format('woff2'),
-        url('../assets/font/TTCommons-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
 :root
 {
     --body-copy: 16px;
@@ -127,7 +118,7 @@ img:hover
 
 h1
 {
-    font-weight: 500;
+    font-weight: 400;
     text-align: center;
     font-size: var(--hero-copy);
     line-height: var(--hero-copy-line-height);
@@ -499,7 +490,8 @@ max-width: 100%;
 
     p, figcaption
     {
-        line-height: calc(var(--body-copy-line-height)/1.2);
+        font-size: calc(var(--body-copy)*1.1);
+        line-height: calc(var(--body-copy-line-height)*1.1);
     }
 
     .herosection
