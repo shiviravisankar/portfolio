@@ -56,7 +56,7 @@ h2
 {
     font-size: calc(var(--hero-copy)*0.7);
     line-height: var(--hero-copy-line-height);
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 15px;
     color: #0099DE;
 }
@@ -64,16 +64,11 @@ h2
 h3
 {
     color: #999999;
+    font-weight: 500;
     margin-bottom: 5px;
 }
 
 h4
-{
-    font-weight: 500;
-    color: #999999;
-}
-
-h5
 {
     font-size: 24px;
     margin-right: 5%;
