@@ -20,7 +20,7 @@ body
 {
     font-family: 'General Sans', sans-serif;
     font-weight: 400;
-    background-color: #131313;
+    background-color: #0C0C0C;
     color: #FDFEFF;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
@@ -50,7 +50,7 @@ p, figcaption
 {
     display: flex;
     justify-content: center;
-    background-color: rgba(49, 49, 49, 0.6);
+    background-color: rgba(27, 27, 27, 0.6);
     padding: 10px 0px;
     border-radius: 100px;
     width: 25%;
