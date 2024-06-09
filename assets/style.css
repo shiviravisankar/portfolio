@@ -463,7 +463,7 @@ max-width: 100%;
 }
 
 /*Media Query - Mobile*/
-@media screen and (max-width: 478px)
+@media screen and (max-width: 576px)
 {
     .navdesktop
     {
