@@ -512,7 +512,7 @@ max-width: 100%;
     p, figcaption
     {
         font-size: calc(var(--body-copy));
-        line-height: calc(var(--body-copy-line-height)*1.1);
+        line-height: calc(var(--body-copy-line-height));
     }
 
     .handwriting
@@ -559,7 +559,6 @@ max-width: 100%;
 
     #about
     {
-        width: 90%;
         padding-top: 5vh;
     }
 
@@ -689,7 +688,7 @@ max-width: 100%;
 
     .git h2
     {
-        height: 2.5vh;
+        height: 3vh;
         padding-top: 3px;
     }
 
