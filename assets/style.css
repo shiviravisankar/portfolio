@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-
 :root
 {
     --body-copy: 14px;
-    --body-copy-line-height: calc(var(--body-copy)*1.5);
+    --body-copy-line-height: calc(var(--body-copy)*1.3);
 
     --nav-copy: 16px;
     --nav-copy-line-height: calc(var(--nav-copy)*1.2);
 
-    --hero-copy: 70px;
+    --hero-copy: 64px;
     --hero-copy-line-height: calc(var(--hero-copy)*1.1);
 
     --title: 30px;
@@ -21,13 +19,13 @@
 
 body
 {
-    font-family: 'Manrope', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 300;
     background-color: #0C0C0C;
     color: #FDFEFF;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
 }
 
 p, figcaption
@@ -108,7 +106,7 @@ p, figcaption
 /*landing*/
 .herosection
 {
-    width: 55%;
+    width: 50%;
     margin: auto;
     padding: auto;
 }
@@ -131,6 +129,7 @@ h1
     line-height: var(--hero-copy-line-height);
     margin-bottom: 30px;
     padding-bottom: 5px;
+    letter-spacing: -1px;
 }
 
 /*image scroll*/
