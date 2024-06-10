@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 :root
 {
     --body-copy: 14px;
-    --body-copy-line-height: calc(var(--body-copy)*1.3);
+    --body-copy-line-height: calc(var(--body-copy)*1.5);
 
     --nav-copy: 16px;
     --nav-copy-line-height: calc(var(--nav-copy)*1.2);
@@ -12,7 +13,7 @@
     --hero-copy-line-height: calc(var(--hero-copy)*1.1);
 
     --title: 30px;
-    --title-line-height: calc(var(--title)*1.1);
+    --title-line-height: calc(var(--title)*1.3);
 
     --columns: 3;
     --grid-gap: 1.5em;
@@ -20,12 +21,13 @@
 
 body
 {
-    font-family: "Inter", sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-weight: 300;
     background-color: #0C0C0C;
     color: #FDFEFF;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
+    letter-spacing: 0.5px;
 }
 
 p, figcaption
@@ -129,7 +131,6 @@ h1
     line-height: var(--hero-copy-line-height);
     margin-bottom: 30px;
     padding-bottom: 5px;
-    letter-spacing: -1px;
 }
 
 /*image scroll*/
