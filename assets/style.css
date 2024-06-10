@@ -515,6 +515,11 @@ max-width: 100%;
         line-height: calc(var(--body-copy-line-height)*1.1);
     }
 
+    .handwriting
+    {
+        height: 4vh;
+    }
+
     .herosection
     {
         width: 85%;
@@ -555,7 +560,7 @@ max-width: 100%;
     #about
     {
         width: 90%;
-        padding-top: 3vh;
+        padding-top: 5vh;
     }
 
     .blurb,
@@ -577,7 +582,7 @@ max-width: 100%;
     .content
     {
         flex-direction: column;
-        margin-top: 5vh;
+        margin-top: 3vh;
     }
 
     .content p
@@ -615,12 +620,6 @@ max-width: 100%;
         line-height: calc(var(--nav-copy-line-height)/1.1);
     }
 
-    h4
-    {
-        font-size: 3.5vh;
-    }
-
-
     .line
     {
         margin-top: 20px;
@@ -649,7 +648,12 @@ max-width: 100%;
     #projects
     {
         width: 90%;
-        padding-top: 3vh;
+        padding-top: 10vh;
+    }
+
+    .caption
+    {
+        margin-top: 2vh;
     }
 
     figcaption
@@ -676,6 +680,12 @@ max-width: 100%;
     .summary
     {
         width: 73%;
+    }
+
+    .git h2
+    {
+        height: 2.5vh;
+        padding-top: 3px;
     }
 
     img
