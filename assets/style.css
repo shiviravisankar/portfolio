@@ -503,6 +503,10 @@ max-width: 100%;
 /*Media Query - Mobile*/
 @media screen and (max-width: 576px)
 {
+    body
+    {
+        overflow-x: hidden;
+    }
 
     .navdesktop
     {
@@ -517,7 +521,8 @@ max-width: 100%;
 
     .handwriting
     {
-        height: 4vh;
+        height: 6vh;
+        margin-bottom: 0px;
     }
 
     .herosection
@@ -571,7 +576,7 @@ max-width: 100%;
     .funfact,
     .purpose 
     {
-        padding: 3.5vh 3.5vh;
+        padding: 4vh 4vh;
         margin-bottom: 2vh;
     }
 
@@ -579,14 +584,14 @@ max-width: 100%;
     .education,
     .contact 
     {
-        padding: 3.5vh 3.5vh;
+        padding: 4vh 4vh;
         margin-bottom: 2vh;
     }
 
     .content
     {
         flex-direction: column;
-        margin-top: 3vh;
+        margin-top: 1vh;
     }
 
     .content p
@@ -657,7 +662,7 @@ max-width: 100%;
 
     .caption
     {
-        margin-top: 2vh;
+        margin-top: 0vh;
     }
 
     figcaption
