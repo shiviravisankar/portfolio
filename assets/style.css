@@ -262,6 +262,7 @@ h2
 .button 
 {
     background-color: #131313;
+    color: #FFFFFF;
     width: 33%;
     padding: 1vh;
     text-align: center;
@@ -272,7 +273,7 @@ h2
 .button:hover 
 {
     background-color: #FFFFFF;
-    color: #1B1B1B;
+    color: #0C0C0C;
 }
 
 .icon2 
