@@ -1,3 +1,34 @@
+//handwriting effect
+const texts = [
+  "hello, I'm shivi",
+  "about me",
+  "what I do",
+  "get in touch"
+];
+
+const handwritings = document.querySelectorAll('.handwriting');
+
+handwritings.forEach((handwriting, index) => {
+  let charIndex = 0;
+
+  function writeText() {
+    if (charIndex < texts[index].length) {
+      handwriting.innerHTML += texts[index].charAt(charIndex);
+      charIndex++;
+      setTimeout(writeText, 200);
+    } else {
+      setTimeout(() => {
+        charIndex = 0;
+        handwriting.innerHTML = '';
+        setTimeout(writeText, 1000);
+      }, 2000);
+    }
+  }
+
+  writeText();
+});
+
+//gif effect
 function gifOn(img) {
   let gif = img.getAttribute('data-gif');
   img.src = gif;
