@@ -647,6 +647,7 @@ max-width: 100%;
         gap: var(--grid-gap);
         width: 95%;
         margin: auto;
+        overflow-x: hidden;
     }
     
     .webpage img, .code img, .ai img {
