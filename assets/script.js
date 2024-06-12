@@ -1,16 +1,16 @@
-//handwriting effect
+// Handwriting Effect
 const texts = [
   "hello, I'm shivi",
   "about me",
   "what I do",
   "get in touch"
-];
-
-const handwritings = document.querySelectorAll('.handwriting');
-
-handwritings.forEach((handwriting, index) => {
+ ];
+ 
+ const handwritings = document.querySelectorAll('.handwriting');
+ 
+ handwritings.forEach((handwriting, index) => {
   let charIndex = 0;
-
+ 
   function writeText() {
     if (charIndex < texts[index].length) {
       handwriting.innerHTML += texts[index].charAt(charIndex);
@@ -24,26 +24,27 @@ handwritings.forEach((handwriting, index) => {
       }, 2000);
     }
   }
-
+ 
   writeText();
-});
-
-//gif effect
-function gifOn(img) {
+ });
+ 
+ // GIF Effect
+ function gifOn(img) {
   let gif = img.getAttribute('data-gif');
   img.src = gif;
-}
-
-function gifOff(img) {
+ }
+ 
+ function gifOff(img) {
   let png = img.src;
   png = png.replace('.gif', '.png');
   img.src = png;
-}
-
-const tabs = document.querySelectorAll('[data-tab-target]');
-const tabContents = document.querySelectorAll('[data-tab-content]');
-
-tabs.forEach(tab => {
+ }
+ 
+ // Tab Switching
+ const tabs = document.querySelectorAll('[data-tab-target]');
+ const tabContents = document.querySelectorAll('[data-tab-content]');
+ 
+ tabs.forEach(tab => {
   tab.addEventListener('click', () => {
     const target = document.querySelector(tab.dataset.tabTarget);
     tabContents.forEach(tabContent => {
@@ -55,15 +56,16 @@ tabs.forEach(tab => {
     tab.classList.add('active');
     target.classList.add('active');
   });
-});
-
-const scrollers = document.querySelectorAll(".scroller");
-
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+ });
+ 
+ // Infinite Scrolling
+ const scrollers = document.querySelectorAll(".scroller");
+ 
+ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   addAnimation();
-}
-
-function addAnimation() {
+ }
+ 
+ function addAnimation() {
   scrollers.forEach((scroller) => {
     scroller.setAttribute("data-animated", true);
     const scrollerInner = scroller.querySelector(".scroller__inner");
@@ -74,46 +76,41 @@ function addAnimation() {
       scrollerInner.appendChild(duplicatedItem);
     });
   });
-}
-
-const navLinks = document.querySelectorAll('.nav-link');
-const activeLink = document.querySelector('.nav-link.active');
-
-if (activeLink) {
+ }
+ 
+ // Active Navigation Link
+ const navLinks = document.querySelectorAll('.nav-link');
+ const activeLink = document.querySelector('.nav-link.active');
+ 
+ if (activeLink) {
   activeLink.classList.add('active');
-}
-
-navLinks.forEach(link => {
+ }
+ 
+ navLinks.forEach(link => {
   link.addEventListener('click', function() {
     navLinks.forEach(link => link.classList.remove('active'));
     this.classList.add('active');
   });
-});
-
-function myFunction() {
-  var copyText = document.getElementById("myInput");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
-  navigator.clipboard.writeText(copyText.value);
-}
-
-function updateActiveLink() {
+ });
+ 
+ // Active Tab Change
+ function updateActiveLink() {
   const scrollPosition = window.scrollY;
   const sections = document.querySelectorAll('section');
-
+ 
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
-
+ 
     if (scrollPosition >= sectionTop - 100 && scrollPosition < sectionTop + sectionHeight - 100) {
       const sectionId = section.getAttribute('id');
       const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-
+ 
       navLinks.forEach(link => link.classList.remove('active'));
-
+ 
       activeLink.classList.add('active');
     }
   });
-}
-
-window.addEventListener('scroll', updateActiveLink);
+ }
+ 
+ window.addEventListener('scroll', updateActiveLink);

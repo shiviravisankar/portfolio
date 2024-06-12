@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
 :root
 {
     --body-copy: 14px;
-    --body-copy-line-height: calc(var(--body-copy)*1.4);
+    --body-copy-line-height: calc(var(--body-copy)*1.3);
 
-    --hero-copy: 28px;
+    --hero-copy: 28.5px;
     --hero-copy-line-height: calc(var(--hero-copy)*1.2);
 }
 
@@ -13,30 +14,125 @@ body
     font-weight: 400;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
+    letter-spacing: 0.4px;
+}
+
+.top 
+{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
+}
+  
+.navdesktop 
+{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(27, 27, 27, 0.7);
+    padding: 10px 0px;
+    border-radius: 100px;
+    width: 55%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-link 
+{
+    font-size: var(--nav-copy);
+    font-weight: 400;
+    color: #86868B;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0px 15px;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+  
+.nav-link:hover,
+.nav-link.active 
+{
+    background-color: #FFFFFF;
+    color: #0C0C0C;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+#head {
+    display: flex;
+    background-color: #0c0c0c;
+    height: 70vh;
+}
+
+.overview {
+    flex: 1;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 5%;
+}
+
+.overview h1 {
+    max-width: 100%; /* Increase the width of the text */
+}
+
+.heroshot {
+    flex: 1.65;
+    overflow: hidden;
+}
+
+.heroshot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*handwriting*/
+.container 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.handwriting 
+{
+    font-family: 'Borel';
+    opacity: 1;
+    height: 7vh;
+    padding-top: 20px;
+    margin-bottom: 2.5vh;
+    background: linear-gradient(to right, #F7C33D, #FE3263, #855AFF, #4CFED3);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+}
+
+.about, .problem, .empty
+{
+    width: 30%;
 }
 
 .text
 {
-    width: 63%;
+    width: 70%;
     margin: auto;
-    margin-top: 7vh;
-    margin-bottom: 10vh;
+    margin-top: 5.5vh;
 }
 
-.intro
+.description
 {
     display: flex;
-    margin-bottom: 7vh;
-}
-
-.overview
-{
-    margin-right: 8%;
-}
-
-.about
-{
-    margin-bottom: 20px;
+    justify-content: space-between;
+    height: 30vh;
 }
 
 .line
@@ -49,21 +145,21 @@ h1
 {
     font-size: var(--hero-copy);
     line-height: var(--hero-copy-line-height);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 h2
 {
     font-size: calc(var(--hero-copy)*0.7);
     line-height: var(--hero-copy-line-height);
-    font-weight: 500;
-    margin-bottom: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
     color: #0099DE;
 }
 
 h3
 {
-    color: #999999;
+    color: #86868B;
     font-weight: 500;
     margin-bottom: 5px;
 }
@@ -79,6 +175,28 @@ h4
     display: flex;
 }
 
+.existing
+{
+    flex: 60%;
+    margin-right: 7%;
+}
+
+img
+{
+    border-radius: 5px;
+}
+
+.challenges
+{
+    flex: 40%;
+}
+
+figcaption
+{
+    margin-top: 5px;
+    color: #86868B;
+}
+
 .users
 {
     padding-top: 7vh;
@@ -87,6 +205,11 @@ h4
 ul
 {
     list-style-type: disc;
+}
+
+li
+{
+    margin-bottom: 15px;
 }
 
 .block, .persona, .audience
@@ -107,7 +230,7 @@ ul
 
 .audience, .persona
 {
-    background-color: #F9F9F9;
+    background-color: #f5f5f7;
     padding: 40px 50px;
     border-radius: 25px;
 }
