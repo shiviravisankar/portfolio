@@ -2,8 +2,8 @@
 const texts = [
     "key challenges to address",
     "the users",
-    "what I do",
-    "get in touch"
+    "guiding principles",
+    "design"
   ];
   
   const handwritings = document.querySelectorAll('.handwriting');
@@ -82,3 +82,36 @@ const texts = [
   }
   
   window.addEventListener('scroll', updateActiveLink);
+
+//highlight principles
+const contentCategorization = document.querySelector('.content-categorization');
+const uxWriting = document.querySelector('.ux-writing');
+const visuals = document.querySelector('.visuals');
+const typeHierarchy = document.querySelector('.type-hierarchy');
+const designLanguage = document.querySelector('.design-language');
+
+const contentDivs = [contentCategorization, uxWriting, visuals, typeHierarchy, designLanguage];
+contentCategorization.style.opacity = '1';
+contentDivs.forEach(div => {
+  if (div !== contentCategorization) {
+    div.style.opacity = '0.5';
+  }
+});
+
+
+contentDivs.forEach(div => {
+  div.addEventListener('mouseenter', () => {
+    contentDivs.forEach(d => {
+      d.style.opacity = d === div ? '1' : '0.5';
+    });
+  });
+
+  div.addEventListener('mouseleave', () => {
+    contentCategorization.style.opacity = '1';
+    contentDivs.forEach(d => {
+      if (d !== contentCategorization) {
+        d.style.opacity = '0.5';
+      }
+    });
+  });
+});
