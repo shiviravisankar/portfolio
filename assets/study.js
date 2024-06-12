@@ -1,7 +1,7 @@
 //handwriting effect
 const texts = [
-    "hello, I'm shivi",
-    "about me",
+    "key challenges to address",
+    "the users",
     "what I do",
     "get in touch"
   ];
