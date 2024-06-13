@@ -10,7 +10,7 @@
     --hero-copy: 64px;
     --hero-copy-line-height: calc(var(--hero-copy)*1.1);
 
-    --title: 30px;
+    --title: 24px;
     --title-line-height: calc(var(--title)*1.3);
 
     --columns: 3;
@@ -430,7 +430,7 @@ max-width: 100%;
 
 .git h2
 {
-    font-size: calc(var(--title)*0.5);
+    font-size: calc(var(--title)*0.65);
     text-align: left;
     height: 4vh;
     padding-top: 0px;
