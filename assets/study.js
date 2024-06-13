@@ -3,7 +3,8 @@ const texts = [
     "key challenges to address",
     "the users",
     "guiding principles",
-    "design"
+    "design",
+    "measure"
   ];
   
   const handwritings = document.querySelectorAll('.handwriting');
