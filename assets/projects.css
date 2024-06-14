@@ -183,7 +183,6 @@ h2
 {
     font-size: calc(var(--hero-copy)*0.7);
     line-height: var(--hero-copy-line-height);
-    font-weight: 600;
     margin-bottom: 5px;
     color: #0099DE;
 }
