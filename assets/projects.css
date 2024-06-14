@@ -1,20 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+
+/*font*/
+@font-face {
+    font-family: 'Inter Display';
+    src: url('../assets/font/InterDisplay-Medium.woff2') format('woff2'),
+        url('../assets/font/InterDisplay-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/font/Inter-Regular.woff2') format('woff2'),
+        url('../assets/font/Inter-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/font/Inter-Light.woff2') format('woff2'),
+        url('../assets/font/Inter-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root
 {
     --body-copy: 14px;
-    --body-copy-line-height: calc(var(--body-copy)*1.3);
+    --body-copy-line-height: calc(var(--body-copy)*1.2);
 
     --hero-copy: 28.5px;
-    --hero-copy-line-height: calc(var(--hero-copy)*1.2);
+    --hero-copy-line-height: calc(var(--hero-copy)*1.1);
 }
 
 body
 {
-    font-family: 'General Sans', sans-serif;
-    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
-    letter-spacing: 0.4px;
 }
 
 .top 
@@ -146,9 +174,9 @@ body
 
 h1
 {
+    font-family: 'Inter Display';
     font-size: var(--hero-copy);
     line-height: var(--hero-copy-line-height);
-    font-weight: 500;
 }
 
 h2
@@ -162,8 +190,8 @@ h2
 
 h3
 {
+    font-weight: 400;
     color: #86868B;
-    font-weight: 500;
     margin-bottom: 5px;
 }
 
