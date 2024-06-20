@@ -242,7 +242,7 @@ li
     margin-bottom: 15px;
 }
 
-.block, .persona, .audience
+.block, .persona, .audience, .block2
 {
     display: flex;
 }
@@ -467,7 +467,7 @@ a
         margin-bottom: 10px;
     }
 
-    .block, .persona, .audience
+    .block, .persona, .audience, .block2
     {
         flex-direction: column;
     }
