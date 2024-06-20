@@ -27,7 +27,7 @@ const texts = [
     writeText();
   });
 
-     // Tab Switching
+  // Tab Switching
  const tabs = document.querySelectorAll('[data-tab-target]');
  const tabContents = document.querySelectorAll('[data-tab-content]');
  
