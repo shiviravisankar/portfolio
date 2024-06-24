@@ -12,6 +12,13 @@
     <title>Shivi is a Designer who Codes</title>
 </head>
 <body>
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <iframe id="overlayFrame" src="" frameborder="0"></iframe>
+            <button id="closeOverlay">&times;</button>
+        </div>
+    </div>
+
     <div class="content">
         <div class="text">
             <div class="container">
@@ -28,7 +35,7 @@
 
         <div class="work">
             <div class="intro">
-                <div class="grid-item1 one">
+                <div class="grid-item1 one" data-overlay="about.html">
                     <h1>About me</h1>
                 </div>
 
@@ -45,7 +52,7 @@
                 </div>
 
                 <div class="image">
-                    <div class="grid-item2">
+                    <div class="grid-item2" data-overlay="gondola.html">
                         <img src="assets/images/gondola.png" alt="Gondola">
                     </div>
 
@@ -53,11 +60,11 @@
                         <img src="assets/images/collabnow.png" alt="CollabNow">
                     </div>
 
-                    <div class="grid-item2">
+                    <div class="grid-item2" data-overlay="astera.html">
                         <img src="assets/images/astera.png" alt="Astera">
                     </div>
 
-                    <div class="grid-item2">
+                    <div class="grid-item2" data-overlay="asana.html">
                         <img src="assets/images/asana.png" alt="Asana">
                     </div>
 
@@ -74,13 +81,13 @@
 
                 <div class="image">
 
-                    <div class="grid-item3 eight">
+                    <div class="grid-item3 eight" data-overlay="code.html">
                         <div class="container">
                             <h2 class="handwriting" id="handwriting3"></h2>
                         </div>
                     </div>
 
-                    <div class="grid-item3 nine">
+                    <div class="grid-item3 nine" data-overlay="ai.html">
                         <div class="container">
                             <h2 class="handwriting" id="handwriting4"></h2>
                         </div>

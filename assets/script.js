@@ -114,3 +114,34 @@ const texts = [
  }
  
  window.addEventListener('scroll', updateActiveLink);
+
+//Overlay
+document.addEventListener('DOMContentLoaded', function() 
+{
+  const overlay = document.getElementById('overlay');
+  const closeButton = document.getElementById('closeOverlay');
+  const overlayFrame = document.getElementById('overlayFrame');
+  const gridItems = document.querySelectorAll('.grid-item1, .grid-item2, .grid-item3');
+
+  gridItems.forEach(item => {
+      item.addEventListener('click', function() {
+          const overlayUrl = this.getAttribute('data-overlay');
+          if (overlayUrl) {
+              overlayFrame.src = overlayUrl;
+              overlay.style.display = 'block';
+          }
+      });
+  });
+
+  closeButton.addEventListener('click', function() {
+      overlay.style.display = 'none';
+      overlayFrame.src = '';
+  });
+
+  overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) {
+          overlay.style.display = 'none';
+          overlayFrame.src = '';
+      }
+  });
+});

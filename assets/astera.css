@@ -1,33 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
 
-/*font*/
-@font-face {
-    font-family: 'Inter Display';
-    src: url('../assets/font/InterDisplay-Medium.woff2') format('woff2'),
-        url('../assets/font/InterDisplay-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('../assets/font/Inter-Regular.woff2') format('woff2'),
-        url('../assets/font/Inter-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('../assets/font/Inter-Light.woff2') format('woff2'),
-        url('../assets/font/Inter-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
 :root
 {
     --body-copy: 14px;
@@ -65,7 +37,7 @@ body
     background-color: rgba(27, 27, 27, 0.7);
     padding: 10px 0px;
     border-radius: 100px;
-    width: 55%;
+    width: 70%;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
@@ -157,6 +129,7 @@ body
     width: 70%;
     margin: auto;
     margin-top: 5.5vh;
+    margin-bottom: 25vh;
 }
 
 .description
@@ -174,7 +147,7 @@ body
 
 h1
 {
-    font-family: 'Inter Display';
+    font-weight: 500;
     font-size: var(--hero-copy);
     line-height: var(--hero-copy-line-height);
 }
@@ -362,12 +335,6 @@ a
 {
     text-decoration: underline;
     color: blue;
-}
-
-.next
-{
-    text-align: center;
-    margin: 10vh 0;
 }
 
 /*Media Query - Mobile*/
