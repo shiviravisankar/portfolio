@@ -3,7 +3,7 @@
 
 :root
 {
-    --body-copy: 14px;
+    --body-copy: 15px;
     --body-copy-line-height: calc(var(--body-copy));
 
     --title: 16px;
@@ -43,7 +43,7 @@ h1
 {
     font-size: var(--hero-copy);
     line-height: var(--hero-copy-line-height);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .intro, .image
@@ -195,6 +195,13 @@ h2
 
     .links p {
         margin-bottom: 10px;
+        color: #999999;
+    }
+
+    .links p:hover
+    {
+        font-weight: 500;
+        color: #FE3263;
     }
 
     .work {
