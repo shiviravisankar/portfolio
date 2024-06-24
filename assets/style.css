@@ -57,6 +57,7 @@ h1
 
 .intro h1
 {
+    font-size: 20px;
     position: absolute;
     bottom: 20px;
     left: 40px;
@@ -68,6 +69,7 @@ h2
     font-size: var(--title);
     line-height: var(--title-line-height);
     font-weight: 400;
+    color: #999999;
 }
 
 .work h2
@@ -166,6 +168,12 @@ h2
     margin-bottom: 30px;
 }
 
+/*Overlay*/
+.overlay, #closeOverlay 
+{
+    display: none;
+}
+
 /* Media query for larger screens */
 @media screen and (min-width: 768px) 
 {
@@ -241,8 +249,7 @@ h2
     }
 
     /*Overlay*/
-    .overlay 
-    {
+    .overlay {
         display: none;
         position: fixed;
         top: 0;
@@ -252,41 +259,45 @@ h2
         background-color: rgba(0, 0, 0, 0.5);
         z-index: 10;
     }
-
-    .overlay-content 
-    {
-    position: relative;
-    width: 90%;
-    height: 90%;
-    margin: 2% auto;
-    background-color: #fff;
-    padding-top: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+    
+    .overlay-content {
+        position: relative;
+        width: 90%;
+        height: 90%;
+        margin: 2% auto;
+        background-color: #fff;
+        padding: 0px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+    }
+    
+    .overlay-content iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
     }
 
-    .overlay-content iframe 
-    {
-    width: 100%;
-    height: 100%;
-    border: none;
+    #closeOverlay {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        padding: 0;
+        cursor: pointer;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        color: #333;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    #closeOverlay 
-    {
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    font-size: calc(var(--hero-copy)*1.2);
-    padding: 12px 10px;
-    cursor: pointer;
-    background-color: #FFFFFF;
-    border-radius: 25px;
-    color: #333;
-    }
-
-    .grid-item1, .grid-item2, .grid-item3 
-    {
-    cursor: pointer;
+    .grid-item1, .grid-item2, .grid-item3 {
+        cursor: pointer;
     }
 }

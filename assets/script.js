@@ -123,14 +123,23 @@ document.addEventListener('DOMContentLoaded', function()
   const overlayFrame = document.getElementById('overlayFrame');
   const gridItems = document.querySelectorAll('.grid-item1, .grid-item2, .grid-item3');
 
-  gridItems.forEach(item => {
-      item.addEventListener('click', function() {
-          const overlayUrl = this.getAttribute('data-overlay');
-          if (overlayUrl) {
-              overlayFrame.src = overlayUrl;
+  function isMobile() {
+      return window.innerWidth <= 768;
+  }
+
+  function handleGridItemClick(e) {
+      if (!isMobile()) {
+          e.preventDefault();
+          const link = this.querySelector('a');
+          if (link) {
+              overlayFrame.src = link.href;
               overlay.style.display = 'block';
           }
-      });
+      }
+  }
+
+  gridItems.forEach(item => {
+      item.addEventListener('click', handleGridItemClick);
   });
 
   closeButton.addEventListener('click', function() {
@@ -140,6 +149,14 @@ document.addEventListener('DOMContentLoaded', function()
 
   overlay.addEventListener('click', function(e) {
       if (e.target === overlay) {
+          overlay.style.display = 'none';
+          overlayFrame.src = '';
+      }
+  });
+
+  // Handle window resize
+  window.addEventListener('resize', function() {
+      if (isMobile()) {
           overlay.style.display = 'none';
           overlayFrame.src = '';
       }

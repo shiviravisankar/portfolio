@@ -36,6 +36,11 @@
     width: 40%;
 }
 
+.container
+{
+    margin-top: 7vh;
+}
+
 .audience, .persona
 {
     padding: 35px 50px;
@@ -51,6 +56,7 @@ h4
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
     font-weight: 600;
+    letter-spacing: 0.2px;
     margin-top: 5vh;
 }
 
