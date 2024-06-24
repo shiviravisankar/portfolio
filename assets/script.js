@@ -1,9 +1,9 @@
 // Handwriting Effect
 const texts = [
   "hello, I'm shivi",
-  "about me",
-  "what I do",
-  "get in touch"
+  "design with purpose",
+  "web development",
+  "AI tools"
  ];
  
  const handwritings = document.querySelectorAll('.handwriting');
