@@ -1,30 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Borel&family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Urbanist:wght@100..900&display=swap');
 
 :root 
 {
     --body-copy: 15px;
     --title: 16px;
-    --hero-copy: 24px;
+    --hero-copy: 28px;
     --grid-item-height: auto;
 }
 
 body 
 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Urbanist', sans-serif;
     font-size: var(--body-copy);
     line-height: 1.5;
-    font-weight: 300;
+    font-weight: 400;
     background-color: #0C0C0C; 
     color: #FFFFFF;
     width: 90%;
     margin: auto;
+    letter-spacing: 1px;
 }
 
 h1 
 {
     font-size: var(--hero-copy);
-    line-height: 1.2;
-    font-weight: 500;
+    line-height: 1.1;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
@@ -32,15 +33,10 @@ h3
 {
     font-size: var(--title);
     line-height: calc(var(--title)*1.2);
-    font-weight: 400;
+    font-weight: 500;
     color: #999999;
     margin-top: 50px;
     margin-bottom: 20px;
-}
-
-p 
-{
-    letter-spacing: 0.5px;
 }
 
 .content 
@@ -68,6 +64,7 @@ p
     background-clip: text;
     -webkit-text-fill-color: transparent;
     width: fit-content;
+    letter-spacing: 0px;
 }
 
 #handwriting2, #handwriting3, #handwriting4 
@@ -224,7 +221,7 @@ p
 
     .links a:hover 
     {
-        font-weight: 500;
+        font-weight: 600;
         color: #FE3263;
     }
 }
