@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Inconsolata:wght@200..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root
 {
-    --body-copy: 14px;
+    --body-copy: 14.5px;
     --body-copy-line-height: calc(var(--body-copy)*1.2);
 
-    --hero-copy: 28.5px;
+    --hero-copy: 24px;
     --hero-copy-line-height: calc(var(--hero-copy)*1.1);
 }
 
 body
 {
-    font-family: "Urbanist", sans-serif;
+    font-family: "Inconsolata", sans-serif;
     font-weight: 300;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
@@ -44,6 +44,7 @@ body
 
 .nav-link 
 {
+    font-family: "Urbanist", sans-serif;
     font-size: var(--nav-copy);
     font-weight: 400;
     color: #86868B;
@@ -147,9 +148,11 @@ body
 
 h1
 {
+    font-family: "Urbanist", sans-serif;
     font-weight: 500;
     font-size: var(--hero-copy);
     line-height: var(--hero-copy-line-height);
+    letter-spacing: 1px;
 }
 
 h2
@@ -162,9 +165,10 @@ h2
 
 h3
 {
-    font-weight: 400;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 500;
     color: #86868B;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 h4
