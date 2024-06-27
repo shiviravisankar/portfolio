@@ -1,41 +1,41 @@
 :root
 {
-    --body-copy: 14px;
-    --body-copy-line-height: calc(var(--body-copy)*1.1);
-    --columns: 1;
-    --grid-gap: 1.5em;
+--body-copy: 14px;
+--body-copy-line-height: calc(var(--body-copy)*1.1);
+--columns: 1;
+--grid-gap: 1.5em;
 }
 
 body
 {
-    font-family: "Urbanist", sans-serif;
-    font-weight: 300;
-    font-size: var(--body-copy);
-    line-height: var(--body-copy-line-height);
-    width: 90%;
-    margin: auto;
-    margin-top: 7vh;
-    background-color: #1B1B1B;
-    color: #FFFFFF;
+font-family: "Urbanist", sans-serif;
+font-weight: 300;
+font-size: var(--body-copy);
+line-height: var(--body-copy-line-height);
+width: 90%;
+margin: auto;
+margin-top: 7vh;
+background-color: #1B1B1B;
+color: #FFFFFF;
 }
 
 .code
 {
-    display: grid;
-    grid-template-columns: repeat(var(--columns),1fr);
-    gap: var(--grid-gap);
-    margin-bottom: 5vh;
-    margin-top: 30px;
+display: grid;
+grid-template-columns: repeat(var(--columns),1fr);
+gap: var(--grid-gap);
+margin-bottom: 5vh;
+margin-top: 30px;
 }
 
 img
 {
-    border-radius: 5px;
+border-radius: 5px;
 }
 
 figcaption
 {
-    color: #FFFFFF;
+color: #FFFFFF;
 }
 
 
@@ -44,37 +44,36 @@ figcaption
 {
 :root
 {
-    --body-copy: 14px;
-    --body-copy-line-height: calc(var(--body-copy)*1.1);
-    --columns: 3;
-    --grid-gap: 1.5em;
+--body-copy: 14px;
+--body-copy-line-height: calc(var(--body-copy)*1.1);
+--columns: 3;
+--grid-gap: 1.5em;
 }
 
 body
 {
-    width: 70%;
-    margin: auto;
-    margin-top: 7vh;
+width: 70%;
+margin: auto;
+margin-top: 7vh;
 }
 
 figure
 {
-    margin-top: 15px;
+margin-top: 15px;
 }
 
 figcaption
 {
-    margin-top: 5px;
+margin-top: 5px;
 }
 
 h3
 {
-    width: 80%;
+width: 80%;
 }
 
 img:hover
 {
-    transform: translateY(-10px);
+transform: translateY(-10px);
 }
-
-}
+}   
