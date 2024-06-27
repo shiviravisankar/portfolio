@@ -11,33 +11,72 @@
 <title>Gondola AI</title>
 
 <style>
-.conundrum {
-    margin-top: 7vh;
+.explain 
+{
+display: flex;
+flex-direction: column-reverse;
+margin-top: 5vh;
+}
+
+/* Desktop styles */
+@media screen and (min-width: 768px) 
+{
+.conundrum 
+{
+margin-top: 7vh;
 }
 
 /* guiding principles */
-main {
-    grid-template-columns: repeat(2, 1fr);
+main 
+{
+grid-template-columns: repeat(2, 1fr);
 }
 
-.content-categorization {
-    grid-column: 1 / 1;
-    grid-row: 1 / 1;
+.content-categorization 
+{
+grid-column: 1 / 1;
+grid-row: 1 / 1;
 }
 
-.visuals {
-    grid-column: 2 / 2;
-    grid-row: 1 / 1;
+.visuals 
+{
+grid-column: 2 / 2;
+grid-row: 1 / 1;
 }
 
-.ux-writing {
-    grid-column: 1 / 1;
-    grid-row: 2 / 2;
+.ux-writing 
+{
+grid-column: 1 / 1;
+grid-row: 2 / 2;
 }
 
-.type-hierarchy {
-    grid-column: 2 / 2;
-    grid-row: 2 / 2;
+.type-hierarchy 
+{
+grid-column: 2 / 2;
+grid-row: 2 / 2;
+}
+
+#heuristics
+{
+margin-top: 7vh;
+}
+
+.explain 
+{
+flex-direction: row;
+justify-content: space-between;
+margin-top: 7vh;
+}
+
+.sentence 
+{
+width: 50%;
+}
+
+.photo 
+{
+width: 40%;
+}
 }
 </style>
 </head>
@@ -127,7 +166,8 @@ includes professionals who travel frequently for work, such as consultants, sale
 </section>
 
 <div class="container conundrum">
-<h2 class="handwriting" id="handwriting2"></h2>
+<h2 class="handwriting" id="handwriting2">
+</h2>
 </div>
 <div class="line"></div>
 <div class="description2">
@@ -160,155 +200,234 @@ The lack of a centralized dashboard leads to missing out on crucial information 
 </div>
 
 <section id="principles">
-    <div class="container">
-    <h2 class="handwriting" id="handwriting3"></h2>
-    </div>
-    <div class="line"></div>
-    <main>
-    <div class="content-div content-categorization">
-    <h3>📝 Designing for a Blank Slate experience</h3>
-    <p>Designing placeholder content for no data states is crucial to provide a clear, informative, and engaging user experience</p>
-    </div>
-    
-    <div class="content-div visuals">
-    <h3>💡 Defining the 'Aha' moment</h3>
-    <p>Identifies the pivotal point when users recognize the product's value & helps earn user trust</p>
-    </div>
-    
-    <div class="content-div ux-writing">
-    <h3>🖼️ Visuals Matter</h3>
-    <p>Creates an emotional connection and drives trust in the product</p>
-    </div>
-    
-    <div class="content-div type-hierarchy">
-    <h3>🛠️ Honing in on that Job-to-be-done</h3>
-    <p>It shifts the focus from the product itself to the underlying reason why users hire the product</p>
-    </div>
-    </main>
-    </section>
-    
-    </div>
-    
-    <script>
-    // Handwriting effect
-    const texts = [
-        "who am I designing for?",
-        "the 'point' conundrum",
-        "guiding principles",
-        "design",
-        "measure"
-    ];
-    
-    const handwritings = document.querySelectorAll('.handwriting');
-    
-    handwritings.forEach((handwriting, index) => {
-        let charIndex = 0;
-    
-        function writeText() {
-            if (charIndex < texts[index].length) {
-                handwriting.innerHTML += texts[index].charAt(charIndex);
-                charIndex++;
-                setTimeout(writeText, 200);
-            } else {
-                setTimeout(() => {
-                    charIndex = 0;
-                    handwriting.innerHTML = '';
-                    setTimeout(writeText, 1000);
-                }, 2000);
-            }
-        }
-    
-        writeText();
-    });
-    
-    // Tab Switching
-    const tabs = document.querySelectorAll('[data-tab-target]');
-    const tabContents = document.querySelectorAll('[data-tab-content]');
-    
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const target = document.querySelector(tab.dataset.tabTarget);
-            tabContents.forEach(tabContent => {
-                tabContent.classList.remove('active');
-            });
-            tabs.forEach(tab => {
-                tab.classList.remove('active');
-            });
-            tab.classList.add('active');
-            target.classList.add('active');
-        });
-    });
-    
-    // Active Navigation Link
-    const navLinks = document.querySelectorAll('.nav-link');
-    const activeLink = document.querySelector('.nav-link.active');
-    
-    if (activeLink) {
-        activeLink.classList.add('active');
-    }
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            navLinks.forEach(link => link.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
-    
-    // Active Tab Change
-    function updateActiveLink() {
-        const scrollPosition = window.scrollY;
-        const sections = document.querySelectorAll('section');
-    
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-    
-            if (scrollPosition >= sectionTop - 100 && scrollPosition < sectionTop + sectionHeight - 100) {
-                const sectionId = section.getAttribute('id');
-                const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-    
-                navLinks.forEach(link => link.classList.remove('active'));
-    
-                if (activeLink) {
-                    activeLink.classList.add('active');
-                }
-            }
-        });
-    }
-    
-    window.addEventListener('scroll', updateActiveLink);
-    
-    // Highlight principles
-    const contentCategorization = document.querySelector('.content-categorization');
-    const uxWriting = document.querySelector('.ux-writing');
-    const visuals = document.querySelector('.visuals');
-    const typeHierarchy = document.querySelector('.type-hierarchy');
-    
-    const contentDivs = [contentCategorization, uxWriting, visuals, typeHierarchy];
-    
-    contentCategorization.style.opacity = '1';
-    contentDivs.forEach(div => {
-        if (div !== contentCategorization) {
-            div.style.opacity = '0.5';
-        }
-    });
-    
-    contentDivs.forEach(div => {
-        div.addEventListener('mouseenter', () => {
-            contentDivs.forEach(d => {
-                d.style.opacity = d === div ? '1' : '0.5';
-            });
-        });
-    
-        div.addEventListener('mouseleave', () => {
-            contentCategorization.style.opacity = '1';
-            contentDivs.forEach(d => {
-                if (d !== contentCategorization) {
-                    d.style.opacity = '0.5';
-                }
-            });
-        });
-    });
-    </script>
-    </body>
-    </html>
+<div class="container">
+<h2 class="handwriting" id="handwriting3"></h2>
+</div>
+<div class="line"></div>
+<main>
+<div class="content-div content-categorization">
+<h3>📝 Designing for a Blank Slate experience</h3>
+<p>Designing placeholder content for no data states is crucial to provide a clear, informative, and engaging user experience</p>
+</div>
+
+<div class="content-div visuals">
+<h3>💡 Defining the 'Aha' moment</h3>
+<p>Identifies the pivotal point when users recognize the product's value & helps earn user trust</p>
+</div>
+
+<div class="content-div ux-writing">
+<h3>🖼️ Visuals Matter</h3>
+<p>Creates an emotional connection and drives trust in the product</p>
+</div>
+
+<div class="content-div type-hierarchy">
+<h3>🛠️ Honing in on that Job-to-be-done</h3>
+<p>It shifts the focus from the product itself to the underlying reason why users hire the product</p>
+</div>
+</main>
+</section>
+
+<section id="heuristics">
+<div class="container">
+<h2 class="handwriting" id="handwriting3"></h2>
+</div>
+<div class="line"></div>
+<div class="explain">
+<div class="sentence">
+<h3>
+Unclear navigation
+</h3>
+<p>
+The distinction between the title of these sections isn't immediately clear, nor is their relationship evident
+</p>
+</div>
+
+<div class="photo">
+<img src="assets/images/heuristic1.png" alt="">
+</div>
+</div>
+
+<div class="explain">
+<div class="sentence">
+<h3>
+“Book a trip” flow
+</h3>
+<p>
+Allows users to search for hotels, but there is no clear path or guidance for booking flights or combining hotel and flight bookings, which is a key value proposition of the platform
+</p>
+</div>
+
+<div class="photo">
+<img src="assets/images/heuristic2.png" alt="">
+</div>
+</div>
+
+<div class="explain">
+<div class="sentence">
+<h3>
+Loyalty program integration
+</h3>
+<p>
+No clear way for users to connect their loyalty programs or import their existing points balances
+</p>
+</div>
+
+<div class="photo">
+<img src="assets/images/heuristic3.png" alt="">
+</div>
+</div>
+
+<div class="explain">
+<div class="sentence">
+<h3>
+Empty state handling
+</h3>
+<p>
+No guidance or affordances for users to book new trips</p>
+</div>
+
+<div class="photo">
+<img src="assets/images/heuristic4.png" alt="">
+</div>
+</div>
+
+<div class="explain">
+<div class="sentence">
+<h3>
+Lack of information
+</h3>
+<p>
+Users should be given appropriate feedback about their travel data or be shown placeholders if no data is available yet
+</p>
+</div>
+
+<div class="photo">
+<img src="assets/images/heuristic5.png" alt="">
+<img src="assets/images/heuristic6.png" alt="">
+</div>
+</div>
+</section>
+
+<script>
+// Handwriting effect
+const texts = [
+"who am I designing for?",
+"the 'point' conundrum",
+"guiding principles",
+"heuristic analysis",
+"measure"
+];
+
+const handwritings = document.querySelectorAll('.handwriting');
+
+handwritings.forEach((handwriting, index) => {
+let charIndex = 0;
+
+function writeText() {
+if (charIndex < texts[index].length) {
+handwriting.innerHTML += texts[index].charAt(charIndex);
+charIndex++;
+setTimeout(writeText, 200);
+} else {
+setTimeout(() => {
+    charIndex = 0;
+    handwriting.innerHTML = '';
+    setTimeout(writeText, 1000);
+}, 2000);
+}
+}
+
+writeText();
+});
+
+// Tab Switching
+const tabs = document.querySelectorAll('[data-tab-target]');
+const tabContents = document.querySelectorAll('[data-tab-content]');
+
+tabs.forEach(tab => {
+tab.addEventListener('click', () => {
+const target = document.querySelector(tab.dataset.tabTarget);
+tabContents.forEach(tabContent => {
+tabContent.classList.remove('active');
+});
+tabs.forEach(tab => {
+tab.classList.remove('active');
+});
+tab.classList.add('active');
+target.classList.add('active');
+});
+});
+
+// Active Navigation Link
+const navLinks = document.querySelectorAll('.nav-link');
+const activeLink = document.querySelector('.nav-link.active');
+
+if (activeLink) {
+activeLink.classList.add('active');
+}
+
+navLinks.forEach(link => {
+link.addEventListener('click', function() {
+navLinks.forEach(link => link.classList.remove('active'));
+this.classList.add('active');
+});
+});
+
+// Active Tab Change
+function updateActiveLink() {
+const scrollPosition = window.scrollY;
+const sections = document.querySelectorAll('section');
+
+sections.forEach(section => {
+const sectionTop = section.offsetTop;
+const sectionHeight = section.clientHeight;
+
+if (scrollPosition >= sectionTop - 100 && scrollPosition < sectionTop + sectionHeight - 100) {
+const sectionId = section.getAttribute('id');
+const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+
+navLinks.forEach(link => link.classList.remove('active'));
+
+if (activeLink) {
+    activeLink.classList.add('active');
+}
+}
+});
+}
+
+window.addEventListener('scroll', updateActiveLink);
+
+// Highlight principles
+const contentCategorization = document.querySelector('.content-categorization');
+const uxWriting = document.querySelector('.ux-writing');
+const visuals = document.querySelector('.visuals');
+const typeHierarchy = document.querySelector('.type-hierarchy');
+
+const contentDivs = [contentCategorization, uxWriting, visuals, typeHierarchy];
+
+contentCategorization.style.opacity = '1';
+contentDivs.forEach(div => {
+if (div !== contentCategorization) {
+div.style.opacity = '0.5';
+}
+});
+
+contentDivs.forEach(div => {
+div.addEventListener('mouseenter', () => {
+contentDivs.forEach(d => {
+d.style.opacity = d === div ? '1' : '0.5';
+});
+});
+
+div.addEventListener('mouseleave', () => {
+contentCategorization.style.opacity = '1';
+contentDivs.forEach(d => {
+if (d !== contentCategorization) {
+    d.style.opacity = '0.5';
+}
+});
+});
+});
+</script>
+</body>
+</html>
