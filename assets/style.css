@@ -18,7 +18,7 @@ body
     color: #FFFFFF;
     width: 90%;
     margin: auto;
-    letter-spacing: 1px;
+    letter-spacing: 0.75px;
 }
 
 h1 
@@ -102,7 +102,7 @@ h3
 
 .two 
 { 
-    background: url(images/vawg.png) no-repeat center/cover; 
+    background: url(images/vawg2.png) no-repeat center/cover; 
 }
 
 .eight 
@@ -148,7 +148,6 @@ h3
     width: 90%;
     height: 90%;
     margin: 2% auto;
-    background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);

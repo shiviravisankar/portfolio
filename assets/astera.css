@@ -15,7 +15,8 @@ body
     font-weight: 300;
     font-size: var(--body-copy);
     line-height: var(--body-copy-line-height);
-    letter-spacing: 1px;
+    letter-spacing: 0.75px;
+    background-color: #FFFFFF;
 }
 
 .top 
@@ -205,7 +206,7 @@ figcaption
     color: #86868B;
 }
 
-.users, #design, #principles, #measure
+#users, #design, #principles, #measure
 {
     padding-top: 7vh;
 }

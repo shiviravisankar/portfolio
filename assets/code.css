@@ -19,7 +19,7 @@ body
     color: #FFFFFF;
 }
 
-.code, .ai
+.code
 {
     display: grid;
     grid-template-columns: repeat(var(--columns),1fr);
@@ -31,6 +31,11 @@ body
 img
 {
     border-radius: 5px;
+}
+
+figcaption
+{
+    color: #FFFFFF;
 }
 
 
@@ -62,10 +67,14 @@ figcaption
     margin-top: 5px;
 }
 
-h1
+h3
 {
-    font-size: 24px;
-    font-weight: 500;
+    width: 80%;
+}
+
+img:hover
+{
+    transform: translateY(-10px);
 }
 
 }
