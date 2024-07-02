@@ -1,16 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/reset.css" rel="stylesheet">
-    <link href="assets/style.css" rel="stylesheet">
-	<link href="assets/about.css" rel="stylesheet">
-    <link href="assets/images/favicon.ico" rel="icon" sizes="any">
-    <link href="/assets/images/touch_icon.png"  rel="apple-touch-icon">
-    <meta content="ogimage.jpg" property="og:image">
-    <title>Hi 👋, I'm Shivi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hi 👋, I'm Shivi</title>
+<link href="assets/reset.css" rel="stylesheet">
+<link href="assets/style.css" rel="stylesheet">
+<link href="assets/images/favicon.ico" rel="icon" sizes="any">
+<link href="/assets/images/touch_icon.png" rel="apple-touch-icon">
+<meta content="ogimage.jpg" property="og:image">
+<style>
+body 
+{
+box-sizing: border-box;
+margin-top: 7vh;
+background-color: #FDFEFF;
+color: #0C0C0C;
+}
+
+#about 
+{
+display: flex;
+flex-direction: column-reverse;
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
+border-radius: 10px;
+}
+
+a
+{
+    border-bottom: 1px solid black;
+}
+
+.texts 
+{
+    margin-bottom: 7vh;
+}
+
+.blurb, .education, .funfact 
+{
+margin-bottom: 15px;
+}
+
+.photo-grid 
+{
+position: relative;
+width: 100%;
+aspect-ratio: 1 / 1;
+overflow: hidden;
+}
+
+.photo 
+{
+position: absolute;
+background-size: cover;
+background-position: center;
+transition: all 0.5s ease;
+opacity: 0;
+transform: translate(-50%, -50%) rotateZ(0deg) translateZ(0px);
+left: 50%;
+top: 50%;
+width: 80%;
+height: 80%;
+border: 10px solid #fff;
+}
+
+@media (min-width: 768px) 
+{
+#about 
+{
+flex-direction: row;
+align-items: flex-start;
+}
+
+.texts 
+{
+width: 40%;
+margin-right: 10%;
+margin-bottom: 0;
+}
+
+.photo-grid 
+{
+width: 50%;
+}
+}
+</style>
 </head>
 <body>
+<section id="about">
+<div class="texts">
+<div class="blurb">
+<p>
+👩🏻‍💻 Hi, I'm Shivi. A Visual Designer with keen interests in coding, data analysis, and design systems. Also, incredibly fascinated by the interplay between AI and design. I craft web platforms, apps, and editorial projects, with focus on design systems, SEO, analytics, and growth strategy to boost satisfaction, revenue, and traffic, reducing drop-off rates
+</p>
+</div>
+<div class="education">
+<p>
+📚 NID and Parsons Alumnus
+</p>
+</div>
+<div class="funfact">
+<p>
+    🌍 I am a third-culture individual who has moved through eight cities across three continents to date. <a href="https://www.are.na/shivi-ravisankar/anomalo" target="_blank">View my attempt</a> to curate all my life experiences through memes
+</p>
+</div>
+</div>
+
+<div class="photo-grid" id="photoGrid"></div>
+</section>
+
+<script>
+    const photoGrid = document.getElementById('photoGrid');
+    const images = [
+        'assets/images/goldengate.jpg',
+        'assets/images/lakecomo.jpg',
+        'assets/images/williamsburg.jpg',
+        'assets/images/5thave.jpg',
+        'assets/images/japantown.jpg',
+        'assets/images/twix.jpg',
+        'assets/images/timessquare.jpg',
+        'assets/images/paris.jpg'
+    ];
+    const numPhotos = images.length;
+    let currentPhotoIndex = 0;
+    
+    function createPhoto(index) {
+        const photo = document.createElement('div');
+        photo.className = 'photo';
+        photo.style.zIndex = index;
+        photo.style.backgroundImage = `url('${images[index]}')`;
+        return photo;
+    }
+    
+    function showNextPhoto() {
+        const photos = document.querySelectorAll('.photo');
+        const currentPhoto = photos[currentPhotoIndex];
+    
+        const angle = Math.random() * 20 - 10;
+        const zOffset = currentPhotoIndex * 0.5;
+    
+        currentPhoto.style.opacity = '1';
+        currentPhoto.style.transform = `translate(-50%, -50%) rotateZ(${angle}deg) translateZ(${zOffset}vw)`;
+        currentPhoto.style.boxShadow = '0 8px 10px rgba(0,0,0,0.4)';
+    
+        currentPhotoIndex = (currentPhotoIndex + 1) % numPhotos;
+    
+        if (currentPhotoIndex === 0) {
+            setTimeout(() => {
+                photos.forEach((photo, index) => {
+                    if (index !== 0) {
+                        photo.style.opacity = '0';
+                        photo.style.transform = 'translate(-50%, -50%) rotateZ(0deg) translateZ(0px)';
+                        photo.style.boxShadow = '0 4px 10px rgba(0,0,0,0.3)';
+                    }
+                });
+            }, 1000);
+        }
+    }
+    
+    function initializePhotoGrid() {
+        for (let i = 0; i < numPhotos; i++) {
+            const photo = createPhoto(i);
+            if (i === 0) {
+                photo.style.opacity = '1';
+                photo.style.transform = 'translate(-50%, -50%) rotateZ(0deg) translateZ(0vw)';
+                photo.style.boxShadow = '0 8px 10px rgba(0,0,0,0.4)';
+            }
+            photoGrid.appendChild(photo);
+        }
+        setTimeout(() => {
+            setInterval(showNextPhoto, 1500);
+        }, 1000);
+    }
+    
+    // Initialize the photo grid immediately
+    initializePhotoGrid();
+    </script>
 </body>
 </html>
