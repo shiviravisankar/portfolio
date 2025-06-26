@@ -1,5 +1,5 @@
 // Handwriting Effect
-const texts = ["hello, I'm shivi"];
+const texts = ["hello, i'm shivi"];
 const handwritings = document.querySelectorAll('.handwriting');
 
 const writeText = (element, text) => {
