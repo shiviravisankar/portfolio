@@ -110,7 +110,7 @@ object-fit: cover;
 border-radius: 16px;
 }
 
-.four, .seven 
+.five, .six 
 {
 aspect-ratio: 2/1;
 }
@@ -176,8 +176,8 @@ margin-left: 25%;
 grid-template-columns: repeat(3, 1fr);
 }
 
-.grid-item1:nth-child(4),
-.grid-item1:nth-child(7) {
+.grid-item1:nth-child(5),
+.grid-item1:nth-child(6) {
 grid-column: span 2;
 aspect-ratio: auto;
 }
