@@ -110,6 +110,13 @@ object-fit: cover;
 border-radius: 16px;
 }
 
+.two img
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .five, .six 
 {
 aspect-ratio: 2/1;
