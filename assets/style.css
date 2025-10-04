@@ -130,7 +130,6 @@ margin-bottom: 30px;
 .links a 
 {
 display: block;
-margin-bottom: 10px;
 color: #999999;
 text-decoration: none;
 font-size: var(--body-copy);
@@ -175,6 +174,11 @@ position: fixed;
 .handwriting {
 height: 6vh;
 min-height: 50px;
+}
+
+.links p:hover
+{
+border-bottom: solid #FF3B6C 2px;
 }
 
 .work {
