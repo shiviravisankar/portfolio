@@ -187,8 +187,8 @@ margin-left: 25%;
 grid-template-columns: repeat(3, 1fr);
 }
 
-.grid-item1:nth-child(5),
-.grid-item1:nth-child(6) {
+.grid-item1:nth-child(5)
+{
 grid-column: span 2;
 aspect-ratio: auto;
 }
