@@ -1,21 +1,23 @@
+/*fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root 
 {
 --body-copy: clamp(14px, 2.5vw, 16px);
 --title: clamp(16px, 3vw, 18px);
---hero-copy: clamp(24px, 5vw, 32px);
+--hero-copy: clamp(20px, 5vw, 32px);
 --handwriting-size: clamp(18px, 4vw, 24px);
 --grid-item-height: auto;
 }
 
 body 
 {
-font-family: 'Satoshi', sans-serif;
+font-family: "Urbanist", sans-serif;
 font-size: var(--body-copy);
 line-height: 1.5;
 font-weight: 400;
-background-color: #FBFBFD; 
+background-color: #FAFAFA; 
 color: #1D1D1F;
 width: 90%;
 margin: auto;
@@ -205,7 +207,7 @@ box-shadow: 0 2px 8px rgba(60, 60, 67, 0.08), 0 1px 3px rgba(60, 60, 67, 0.04);
 :root {
 --body-copy: 16px;
 --title: 16px;
---hero-copy: 28px;
+--hero-copy: 24px;
 --handwriting-size: 18px;
 }
 }
