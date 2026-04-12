@@ -1,23 +1,40 @@
-// Handwriting Effect
-const texts = ["hello, i'm shivi"];
-const handwritings = document.querySelectorAll('.handwriting');
+const text = "hello, i'm shivi";
+const el = document.getElementById("handwriting1");
 
-const writeText = (element, text) => {
-  let charIndex = 0;
-  const write = () => {
-    if (charIndex < text.length) {
-      element.innerHTML += text.charAt(charIndex);
-      charIndex++;
-      setTimeout(write, 200);
+let i = 0;
+
+function typeLoop() {
+
+  function type() {
+    if (i < text.length) {
+      el.textContent += text.charAt(i);
+      i++;
+
+      let delay = 110;
+
+      if (text[i - 1] === "," || text[i - 1] === "'") {
+        delay += 120;
+      }
+
+      setTimeout(type, delay);
+
     } else {
-      setTimeout(() => {
-        element.innerHTML = '';
-        charIndex = 0;
-        write();
-      }, 2000);
+      setTimeout(erase, 2200);
     }
-  };
-  write();
-};
+  }
 
-handwritings.forEach((handwriting, index) => writeText(handwriting, texts[index]));
+  function erase() {
+    if (i > 0) {
+      el.textContent = text.substring(0, i - 1);
+      i--;
+
+      setTimeout(erase, 55);
+    } else {
+      setTimeout(type, 500);
+    }
+  }
+
+  type();
+}
+
+typeLoop();
