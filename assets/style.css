@@ -11,93 +11,93 @@ body {
   background: #F6F5F4;
   color: #191919;
 
-  max-width: 1200px;
+  width: 85%;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 24px;
+
+  padding: 40px 0 80px 0;
 
   letter-spacing: -0.01em;
 }
 
-/* remove default heading spacing inconsistencies */
 h1, h2, h3, p {
   margin: 0;
+}
+
+/* ---------------- IMAC TYPOGRAPHY ---------------- */
+@media (min-width: 1400px) {
+  body { font-size: 16px; }
+
+  h1 {
+    font-size: clamp(28px, 3.2vw, 38px);
+  }
+
+  .card-content h4 { font-size: 14px; }
+  .card-content p { font-size: 13.5px; }
+  .text > p { font-size: 14px; }
+  .links p { font-size: 14px; }
+
+  .work { gap: 28px; }
 }
 
 /* ---------------- LAYOUT ---------------- */
 .content {
   display: flex;
   flex-direction: column;
-  margin-top: 32px;
 }
 
-/* ---------------- LEFT COLUMN ---------------- */
+/* ---------------- LEFT ---------------- */
 .text {
   display: flex;
   flex-direction: column;
   max-width: 260px;
 }
 
-/* ---------------- HANDWRITING (FINAL FIX) ---------------- */
+/* ---------------- HANDWRITING ---------------- */
 .handwriting {
   position: relative;
   display: inline-block;
-
   font-family: 'Borel', cursive;
-  font-size: 20px;
-
-  line-height: 1; /* 🔥 remove unpredictable line box */
+  font-size: 18px;
+  line-height: 1;
 }
 
-/* ghost = controls size */
 .handwriting .ghost {
   visibility: hidden;
   white-space: nowrap;
-
   display: block;
-  line-height: 1.8;     /* 🔥 BIGGER than needed */
-  padding-top: 6px;     /* 🔥 forces extra headroom */
+  line-height: 1.8;
+  padding-top: 6px;
 }
 
-/* typed = visual layer */
 .handwriting .typed {
   position: absolute;
   left: 0;
   top: 0;
-
   white-space: nowrap;
+  line-height: 1.8;
+  padding-top: 6px;
 
-  line-height: 1.8;     /* MUST match ghost */
-  padding-top: 6px;     /* MUST match ghost */
-
-  background: linear-gradient(
-    90deg,
-    #FFC700,
-    #FF3B6C,
-    #7B5CFF,
-    #3CFCD0
-  );
-
+  background: linear-gradient(90deg,#FFC700,#FF3B6C,#7B5CFF,#3CFCD0);
   background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
 }
 
-/* ---------------- HEADINGS ---------------- */
+/* ---------------- TEXT ---------------- */
 h1 {
   font-size: clamp(24px, 3vw, 32px);
   font-weight: 600;
   line-height: 1.2;
-
   margin-bottom: 10px;
 }
 
-/* ---------------- META TEXT ---------------- */
 .text > p {
   color: #6B6B6B;
   margin-bottom: 18px;
 }
 
-/* ---------------- SECTION LABEL ---------------- */
 h3 {
   font-size: 13px;
   color: #E60000;
@@ -115,13 +115,9 @@ h3 {
 .links p {
   display: block;
   width: fit-content;
-
   margin-bottom: 10px;
   padding-bottom: 4px;
-
   border-bottom: 1px solid rgba(0,0,0,0.15);
-
-  color: #191919;
   transition: all 0.15s ease;
 }
 
@@ -136,28 +132,66 @@ h3 {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 
-  margin-top: 32px;
+  align-items: stretch;
 }
 
-/* ---------------- CARDS ---------------- */
-.grid-item1 {
+/* ---------------- CARD ---------------- */
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  height: 100%;
+
+  background: #FFFFFF;
   border-radius: 10px;
   overflow: hidden;
 
-  background: #FFFFFF;
-  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(0,0,0,0.05);
 
   box-shadow:
     0 1px 2px rgba(0,0,0,0.04),
-    0 4px 12px rgba(0,0,0,0.04);
+    0 6px 16px rgba(0,0,0,0.04);
 
   transition: transform 0.2s ease;
 }
 
-.grid-item1 img {
+/* ---------------- IMAGE ---------------- */
+.card-media {
+  width: 100%;
+  height: 200px;
+  background: #eee;
+}
+
+.card-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* ---------------- CONTENT ---------------- */
+.card-content {
+  padding: 0px 14px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card-content h4 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.card-content p {
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: #6B6B6B;
+}
+
+/* ---------------- WIDE ---------------- */
+.grid-item.wide {
+  grid-column: span 2;
 }
 
 /* ---------------- DESKTOP ---------------- */
@@ -169,18 +203,43 @@ h3 {
 
   .text {
     position: sticky;
-    top: 32px;
+    top: 40px;
   }
 
   .work {
     flex: 1;
-    margin-top: 0;
   }
 }
 
 /* ---------------- HOVER ---------------- */
 @media (hover: hover) {
-  .grid-item1:hover {
+  .grid-item:hover {
     transform: translateY(-2px);
+  }
+}
+
+/* ---------------- TABLET ---------------- */
+@media (max-width: 900px) {
+  .work {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-item.wide {
+    grid-column: span 2;
+  }
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 500px) {
+  .work {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-item.wide {
+    grid-column: span 1;
+  }
+
+  .text {
+    margin-bottom: 40px;
   }
 }
