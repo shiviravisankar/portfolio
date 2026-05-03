@@ -69,7 +69,7 @@ flex-direction: column;
 .text {
 display: flex;
 flex-direction: column;
-max-width: 300px;
+max-width: 340px;
 }
 
 /* ---------------- HANDWRITING ---------------- */
