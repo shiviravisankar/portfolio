@@ -1,40 +1,78 @@
+/*------------- handwriting -------------*/
+
 const text = "hello, i'm shivi";
-const el = document.getElementById("handwriting1");
+const element = document.getElementById("handwriting1");
 
-let i = 0;
+let index = 0;
+let deleting = false;
 
-function typeLoop() {
+function type() {
 
-  function type() {
-    if (i < text.length) {
-      el.textContent += text.charAt(i);
-      i++;
+if (!element) return;
 
-      let delay = 110;
+if (!deleting) {
 
-      if (text[i - 1] === "," || text[i - 1] === "'") {
-        delay += 120;
-      }
+element.textContent = text.slice(0, index + 1);
+index++;
 
-      setTimeout(type, delay);
-
-    } else {
-      setTimeout(erase, 2200);
-    }
-  }
-
-  function erase() {
-    if (i > 0) {
-      el.textContent = text.substring(0, i - 1);
-      i--;
-
-      setTimeout(erase, 55);
-    } else {
-      setTimeout(type, 500);
-    }
-  }
-
-  type();
+if (index === text.length) {
+deleting = true;
+setTimeout(type, 2200);
+return;
 }
 
-typeLoop();
+const character = text[index - 1];
+
+let delay = 90;
+
+if (character === "," || character === "'") {
+delay = 180;
+}
+
+setTimeout(type, delay);
+
+} else {
+
+element.textContent = text.slice(0, index - 1);
+index--;
+
+if (index === 0) {
+deleting = false;
+setTimeout(type, 600);
+return;
+}
+
+setTimeout(type, 45);
+
+}
+
+}
+
+window.addEventListener("load", () => {
+type();
+});
+
+/*------------- smooth scroll-------------*/
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+link.addEventListener("click", e => {
+
+const id = link.getAttribute("href");
+
+if (id === "#") return;
+
+const target = document.querySelector(id);
+
+if (!target) return;
+
+e.preventDefault();
+
+target.scrollIntoView({
+behavior: "smooth",
+block: "start"
+});
+
+});
+
+});
