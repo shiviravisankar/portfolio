@@ -10,7 +10,10 @@
     --accent:#E60000;
     --card-bg:#fff;
     --image-bg:#14141A;
-    --transition:.25s ease;
+
+    /* strong custom easing curves — built-in CSS easings feel weak */
+    --ease-out:cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out:cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 /*------------- reset -------------*/
@@ -29,7 +32,7 @@ html
 
 body
 {
-    font-family: "Geist", sans-serif;
+    font-family: "Geist", -apple-system, BlinkMacSystemFont, sans-serif;
     background:var(--bg);
     color:var(--text);
     font-size:16px;
@@ -49,6 +52,15 @@ a
 {
     text-decoration:none;
     color:inherit;
+}
+
+/* visible keyboard focus — none of the interactive elements had this */
+a:focus-visible,
+.primary-button:focus-visible
+{
+    outline:2px solid var(--accent);
+    outline-offset:3px;
+    border-radius:4px;
 }
 
 ul
@@ -88,7 +100,7 @@ h3
 {
     font-size:18px;
     font-weight:500;
-    letter-spacing:-.03em;
+    letter-spacing:-.02em;
 }
 
 p
@@ -168,7 +180,8 @@ p
 {
     font-size:16px;
     font-weight:500;
-    transition:var(--transition);
+    /* specify exact property instead of transitioning "all" */
+    transition:color 200ms var(--ease-out);
 }
 
 .hero-actions a:hover
@@ -187,11 +200,18 @@ p
     border:1px solid var(--border);
     border-radius:999px;
     background:#fff;
+    transition:border-color 200ms var(--ease-out), transform 120ms var(--ease-out);
 }
 
 .primary-button:hover
 {
     border-color:var(--border-hover);
+}
+
+/* press feedback so it feels like the UI is listening */
+.primary-button:active
+{
+    transform:scale(0.97);
 }
 
 /*------------- right column -------------*/
@@ -218,6 +238,7 @@ p
 {
     font-size:22px;
     font-weight:500;
+    letter-spacing:-.025em;
 }
 
 .clients ul
@@ -232,13 +253,17 @@ p
     font-size:16px;
     font-weight:400;
     color:var(--text);
-    transition:color .25s ease, font-weight .25s ease;
     cursor:pointer;
+    /* color only — animating font-weight forces text reflow */
+    transition:color 200ms var(--ease-out);
 }
 
-.clients li:hover
+@media (hover:hover) and (pointer:fine)
 {
-    color:var(--accent);
+    .clients li:hover
+    {
+        color:var(--accent);
+    }
 }
 
 /*------------- section -------------*/
@@ -255,7 +280,7 @@ p
 {
     font-size:28px;
     font-weight:500;
-    letter-spacing:-0.03em;
+    letter-spacing:-0.045em;
 }
 
 .section-heading p
@@ -287,14 +312,28 @@ p
     border:1px solid var(--border);
     border-radius:20px;
     overflow:hidden;
-    transition:border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+    transition:border-color 220ms var(--ease-out), box-shadow 220ms var(--ease-out), transform 220ms var(--ease-out);
+
+    /* entrance, staggered below per card */
+    opacity:0;
+    transform:translateY(20px);
+    animation:fadeUp 500ms var(--ease-out) forwards;
 }
 
-.project:hover
+.project:nth-child(1) { animation-delay:0ms; }
+.project:nth-child(2) { animation-delay:60ms; }
+.project:nth-child(3) { animation-delay:120ms; }
+.project:nth-child(4) { animation-delay:180ms; }
+.project:nth-child(5) { animation-delay:240ms; }
+
+@media (hover:hover) and (pointer:fine)
 {
-    border-color:var(--border-hover);
-    box-shadow:0 12px 32px -12px rgba(0,0,0,.12);
-    transform:translateY(-2px);
+    .project:hover
+    {
+        border-color:var(--border-hover);
+        box-shadow:0 12px 32px -12px rgba(0,0,0,.12);
+        transform:translateY(-2px);
+    }
 }
 
 .project-image
@@ -308,7 +347,8 @@ p
 {
     width:100%;
     height:100%;
-    object-fit:fill;
+    /* "fill" was distorting thumbnails out of aspect ratio */
+    object-fit:cover;
     display:block;
 }
 
@@ -360,7 +400,7 @@ footer
     font-size:42px;
     font-weight:500;
     line-height:1;
-    letter-spacing:-0.05em;
+    letter-spacing:-0.055em;
 }
 
 .footer-right
@@ -373,7 +413,7 @@ footer
 .footer-right a
 {
     font-size:16px;
-    transition:var(--transition);
+    transition:color 200ms var(--ease-out);
 }
 
 .footer-right a:hover
@@ -465,6 +505,8 @@ footer
     {
         font-size:42px;
         max-width:none;
+        /* less negative tracking at smaller size — the desktop value felt cramped here */
+        letter-spacing:-0.035em;
     }
 
     .hero
@@ -502,6 +544,7 @@ footer
     .footer-left h2
     {
         font-size:34px;
+        letter-spacing:-0.04em;
     }
 }
 
@@ -540,7 +583,7 @@ footer
 .about,
 footer
 {
-    animation:fadeUp .8s ease both;
+    animation:fadeUp 600ms var(--ease-out) both;
 }
 
 .projects
@@ -571,4 +614,32 @@ footer
         opacity:1;
         transform:none;
     }
+}
+
+/*------------- reduced motion -------------*/
+
+@media (prefers-reduced-motion: reduce)
+{
+    *
+    {
+        animation-duration:0.01ms !important;
+        animation-delay:0ms !important;
+        transition-duration:0.01ms !important;
+    }
+
+    .project,
+    .hero,
+    .projects,
+    .about,
+    footer
+    {
+        /* keep the opacity fade, drop the movement */
+        animation:fadeOpacity 200ms ease both;
+    }
+}
+
+@keyframes fadeOpacity
+{
+    from { opacity:0; }
+    to { opacity:1; }
 }
