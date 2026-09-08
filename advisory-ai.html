@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advisory AI — Shivi Ravisankar</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="assets/reset.css" rel="stylesheet">
+<link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+<main>
+
+<section class="case-layout">
+
+<!-------------- left: sticky nav -------------->
+
+<div class="case-nav">
+
+<a href="index.html" class="back-link">
+← Back
+</a>
+
+<p class="eyebrow">
+Fintech · AI · Financial Advisory
+</p>
+
+<h1 class="case-title">
+Advisory AI
+</h1>
+
+<p class="case-subtitle">
+Application Redesign
+</p>
+
+<div class="case-nav-block">
+<p class="eyebrow">
+Role
+</p>
+<p class="case-role">
+Design Lead — sole design owner, working directly with the founder, engineering, and development team
+</p>
+</div>
+
+<div class="case-nav-block">
+<p class="eyebrow">
+On This Page
+</p>
+<ul class="case-toc">
+<li><a href="#situation">Situation</a></li>
+<li><a href="#tension">Tension</a></li>
+<li><a href="#decisions">Decisions</a></li>
+<li><a href="#craft">Craft</a></li>
+<li><a href="#outcome">Outcome</a></li>
+<li><a href="#reflection">Reflection</a></li>
+</ul>
+</div>
+
+</div>
+
+<!-------------- right: case content -------------->
+
+<div class="case-content">
+
+<div class="case-cover">
+<img src="assets/images/case-studies/advisory-ai-cover.png" alt="Advisory AI dashboard">
+</div>
+
+<section id="situation" class="case-section">
+<h2>The Situation</h2>
+<p>
+Advisory AI began as a documentation problem. Financial advisers and paraplanners were losing hours to manual meeting notes, letters, and fact finds, work that could not be shortened given the record keeping rules that govern financial advice. I joined as the sole designer on an early stage team, working directly with the founder, engineer, and developer rather than through a product or design layer. The product covered client records, meetings, team permissions, and reporting from end to end.
+</p>
+</section>
+
+<section id="tension" class="case-section">
+<h2>The Tension</h2>
+<p>
+The brief asked for a tool that documented what had already happened in a client meeting. I made the case to reposition it instead: rather than only record the past, the tool should help advisers prepare for what comes next, surfacing action items, context, and prompts ahead of the following call. This was not a single feature. It ran through the entire meeting process, with preparation generated before each call and follow up tasks generated afterward.
+</p>
+<p>
+This raised the stakes of getting it wrong. A weak summary is an easy fix. A weak suggestion about what to do next sits closer to advice, and advice in this field is regulated. The real design problem became how to give advisers a sense of what is coming without the tool making that decision for them.
+</p>
+</section>
+
+<section id="decisions" class="case-section">
+<h2>The Decisions</h2>
+
+<div class="decision-block">
+<h3>From recording the past to preparing for what is next</h3>
+<p>
+Rather than build to the brief as written, I proposed reframing the product around what advisers needed before a meeting: synced calendar context, prep notes, and open items from earlier interactions, instead of only documenting what had already occurred. I took this directly to the founder and engineering team, and it shaped the direction of the product from that point on.
+</p>
+</div>
+
+<div class="decision-block">
+<h3>Every suggestion requires the adviser's approval</h3>
+<p>
+Once the product began generating predictive content, such as action items and suggested next steps, a new risk emerged: an AI generated suggestion could read as settled advice rather than a draft. I designed the review process so that nothing the AI produced was treated as final by default. Reports were broken into individual sections, each requiring its own explicit approval before moving forward, with editing options such as shortening a section or simplifying its language. Advisers were never required to accept or rewrite an entire document at once. They could approve what was correct and adjust only what was not. The same principle carried into meeting preparation, where suggestions appeared as dismissible prompts rather than mandatory steps. This is what allowed a predictive tool to meet a level of trust that a purely informative one never had to earn.
+</p>
+</div>
+
+</section>
+
+<section id="craft" class="case-section">
+<h2>Craft</h2>
+
+<div class="craft-grid">
+
+<article class="craft-item">
+<div class="craft-image">
+<img src="assets/images/case-studies/advisory-ai-templates.png" alt="Template selection and report generation">
+</div>
+<p><strong>Template selection and report generation.</strong> Advisers choose from a filterable template library, upload source documents, and generate a first draft within minutes.</p>
+</article>
+
+<article class="craft-item">
+<div class="craft-image">
+<img src="assets/images/case-studies/advisory-ai-review.png" alt="Section by section review">
+</div>
+<p><strong>Section by section review.</strong> The core trust building mechanism: each section of a generated report is reviewed and approved individually, with targeted editing prompts rather than a single approval for the whole document.</p>
+</article>
+
+<article class="craft-item">
+<div class="craft-image">
+<img src="assets/images/case-studies/advisory-ai-prep.png" alt="Meeting preparation prompts">
+</div>
+<p><strong>Meeting preparation.</strong> The meetings dashboard surfaces specific, generated prompts ahead of each call, such as revising a client feedback summary, each of which can be dismissed if not relevant.</p>
+</article>
+
+<article class="craft-item">
+<div class="craft-image">
+<img src="assets/images/case-studies/advisory-ai-history.png" alt="Client history in context">
+</div>
+<p><strong>Client history in context.</strong> The meeting profile displays the last meeting date, notes, and past documents, so advisers have continuity available without needing to search for it.</p>
+</article>
+
+</div>
+
+<p class="craft-followup">
+After a call, the same predictive layer generates next steps, such as summarizing decisions or sharing the report, closing the loop it opened before the meeting.
+</p>
+
+</section>
+
+<section id="outcome" class="case-section">
+<h2>Outcome</h2>
+<p>
+Advisory AI was handed off to the client after the design phase, so I do not have post launch usage data or adoption figures to reference. What I can speak to with confidence is the reasoning behind the decisions themselves: the shift from an informative tool to a predictive one, and the trust mechanism that made a predictive AI tool workable in a regulated space. These were validated in review with the founder and engineering team before handoff, not against real users in production.
+</p>
+</section>
+
+<section id="reflection" class="case-section">
+<h2>Reflection</h2>
+<p>
+The central lesson from this project was not about AI capability. It was about identifying where AI generated content needs a human checkpoint, and where it does not. The natural instinct with an AI product is to automate as much as possible and treat human review as friction to minimize. This project pushed me in the opposite direction. In a regulated domain, the review step is not overhead. It is what makes the automation trustworthy enough to use. Reviewing each section individually was slower than a single approval step would have been, and that was the right trade to make.
+</p>
+<p>
+If I were approaching this today, I would want to test that trust mechanism with real advisers earlier in the process, not only defend it in design review, but observe someone actually deciding whether to trust or correct a suggestion in the moment.
+</p>
+</section>
+
+<a href="index.html" class="primary-button case-back-cta">
+Back to Work
+</a>
+
+</div>
+
+</section>
+
+</main>
+</body>
+</html>

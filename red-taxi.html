@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Red Taxi — Shivi Ravisankar</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="assets/reset.css" rel="stylesheet">
+<link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+<main>
+
+<section class="case-layout">
+
+<!-------------- left: sticky nav -------------->
+
+<div class="case-nav">
+
+<a href="index.html" class="back-link">
+← Back
+</a>
+
+<p class="eyebrow">
+Mobility · Ride-hailing · Tamil Nadu
+</p>
+
+<h1 class="case-title">
+Red Taxi
+</h1>
+
+<p class="case-subtitle">
+Application Redesign
+</p>
+
+<div class="case-nav-block">
+<p class="eyebrow">
+Role
+</p>
+<p class="case-role">
+UX Lead — led UX for the app redesign, working alongside Wibin Ayinikat as UI lead, each reviewing the other's work across domains
+</p>
+</div>
+
+<div class="case-nav-block">
+<p class="eyebrow">
+On This Page
+</p>
+<ul class="case-toc">
+<li><a href="#situation">Situation</a></li>
+<li><a href="#tension">Tension</a></li>
+<li><a href="#decisions">Decisions</a></li>
+<li><a href="#craft">Craft</a></li>
+<li><a href="#outcome">Outcome</a></li>
+<li><a href="#reflection">Reflection</a></li>
+</ul>
+</div>
+
+</div>
+
+<!-------------- right: case content -------------->
+
+<div class="case-content">
+
+<div class="case-cover">
+<img src="assets/images/case-studies/red-taxi-cover.png" alt="Red Taxi app redesign">
+</div>
+
+<section id="situation" class="case-section">
+<h2>The Situation</h2>
+<p>
+Red Taxi is an established ride-hailing operator across Tamil Nadu, not a new company trying to look credible. It runs a branded fleet instead of drivers' personal cars, trains its drivers directly, and enforces fixed fares with no haggling. Those are real advantages over Ola and Uber. None of it showed up in the app. The interface looked outdated next to national competitors, so a company with more to offer looked less trustworthy than competitors offering less.
+</p>
+<p>
+The business goal was specific: shift bookings from phone calls to the app, without losing the older, less tech-savvy riders who called because they trusted a person on the phone more than a screen.
+</p>
+</section>
+
+<section id="tension" class="case-section">
+<h2>The Tension</h2>
+<p>
+Every choice in this project came back to the same question: how much reassurance should the app show before that reassurance itself starts to feel like a warning sign. Add more visible trust and safety features, and the app risks looking like it's making up for a problem it doesn't have. Simplify the main screen down to what most people do most often, and the features left out of view stop being found by the people who need them.
+</p>
+<p>
+Reuse an existing flow for a new use case, and you avoid building and maintaining a second one, but that new case gets served less precisely. Every decision below was a version of that same trade.
+</p>
+</section>
+
+<section id="decisions" class="case-section">
+<h2>The Decisions</h2>
+
+<div class="decision-block">
+<h3>Booking flow over discoverability</h3>
+<p>
+The main screen was reduced to three destinations: Ride, Bookings, Profile. Favourites, Notifications, Booking History, and Help Center all moved into a menu, so the core action of booking a ride would feel as fast and obvious as the brief demanded. Usability testing on the resulting prototype confirmed the trade both ways: booking a local ride landed at near-perfect completion, while several of the features that moved into the menu performed well below that. Users coming from WhatsApp and PhonePe expected those features visible up front. The decision wasn't wrong, it was a real trade against a stated priority, and the testing shows how much it actually cost.
+</p>
+</div>
+
+<div class="decision-block">
+<h3>Defending a feature that failed its first test</h3>
+<p>
+The brief's core ask was to move users off the phone and onto the app, so an in-app messaging feature with text and voice notes was added to the ride-accepted screen. On the first test, fewer than half the participants completed it: they mistook the voice note's play button for send, and some existing users found the feature unfamiliar enough that they defaulted to calling anyway, the exact behavior it was meant to reduce. Rather than cut the feature, we changed the color contrast between message types and re-tested. Completion rose to nearly all participants. Keeping it after a failed first round was a bet that the idea was right and the execution needed one more pass.
+</p>
+</div>
+
+<div class="decision-block">
+<h3>One flow, not two, for corporate riders</h3>
+<p>
+Corporate accounts had real different needs: no personal payment methods, no booking rides for someone else on the company's account, no stacking personal coupons. The obvious build is a separate corporate booking flow with its own screens. Instead, a Personal/Corporate switch was added to the existing local, rental, and outstation booking screens, visible only to corporate accounts, which changes the user's context and turns off the options that don't apply. This meant reusing a flow that had already been tested rather than building and maintaining a second one, at the cost of a less tailored corporate experience, no dedicated invoicing screen, no multi-rider handling built into this version.
+</p>
+</div>
+
+</section>
+
+<section id="craft" class="case-section">
+<h2>Craft</h2>
+
+<div class="craft-grid">
+
+<article class="craft-item">
+<div class="craft-image">
+<img src="assets/images/case-studies/red-taxi-messaging.png" alt="Messaging bubble contrast A/B test">
+</div>
+<p><strong>Messaging contrast.</strong> Two versions of the driver messaging screen were tested for bubble color, solid red against red and white. Every participant who saw both preferred the red and white version, citing better readability and a clearer difference between rider and driver messages.</p>
+</article>
+
+<article class="craft-item">
+<div class="craft-image">
+<img src="assets/images/case-studies/red-taxi-recalibration.png" alt="Location recalibration button A/B test">
+</div>
+<p><strong>Location recalibration.</strong> A larger recalibration button placed within easy thumb reach on the map was preferred by most participants over a smaller corner placement, for both visual prominence and one-handed reachability.</p>
+</article>
+
+<article class="craft-item">
+<div class="craft-image">
+<img src="assets/images/case-studies/red-taxi-connecting.png" alt="Connecting to driver animation A/B test">
+</div>
+<p><strong>Connecting to driver.</strong> A circular loading animation was preferred by most participants over a signal-style icon, which some read as a connectivity indicator rather than a sign that a driver was being assigned.</p>
+</article>
+
+<article class="craft-item">
+<div class="craft-image">
+<img src="assets/images/case-studies/red-taxi-identity.png" alt="Regional visual identity">
+</div>
+<p><strong>Regional visual identity.</strong> The visual identity leaned into Tamil Nadu specifically rather than a generic ride-hailing look, reflecting that Red Taxi isn't trying to scale nationally yet and has real regional trust to draw on.</p>
+</article>
+
+</div>
+
+<p class="craft-followup">
+Across all three tests, the version participants preferred was also the one closer to a pattern they already knew from other apps, rather than a new one they had to learn.
+</p>
+
+</section>
+
+<section id="outcome" class="case-section">
+<h2>Outcome</h2>
+<p>
+This was validated through moderated usability testing on a working prototype with nine participants, five existing Red Taxi users and four non-users, not live post-launch data. I don't have adoption or booking numbers from a shipped release. What the testing showed: the core booking flow performed close to a perfect score, the messaging feature recovered from a failed first test to a strong second one, and the navigation change produced a specific, measurable cost in four secondary features. Testing happened outside a live booking context, so behaviors tied to real urgency, distraction, or driver interaction may not have fully surfaced. Corporate booking is being rolled out only now, so it wasn't part of this research round and has no usage data yet either.
+</p>
+</section>
+
+<section id="reflection" class="case-section">
+<h2>Reflection</h2>
+<p>
+The clearest miss, in hindsight, is that Booking History was the weakest-performing task in the entire study and didn't get its own findings page the way Favourites, Notifications, and Help Center did. If I did this again, I'd treat a result that far below the rest as a reason to investigate it on its own, not just a line in a summary table next to features that at least partially worked.
+</p>
+<p>
+The onboarding and emergency-contact flows surfaced a pattern worth carrying into future work: safety features that ask for something upfront, a profile photo, a date of birth, an emergency contact, read as care to some users and as friction or a privacy concern to others, especially women asked for a photo. Assuming that more visible safety features are always better was the wrong instinct. The better version of this app makes those features easy to add later rather than something required before using it at all.
+</p>
+</section>
+
+<a href="index.html" class="primary-button case-back-cta">
+Back to Work
+</a>
+
+</div>
+
+</section>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SoraCloud — Shivi Ravisankar</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="assets/reset.css" rel="stylesheet">
+<link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+<main>
+
+<section class="case-layout">
+
+<!-------------- left: sticky nav -------------->
+
+<div class="case-nav">
+
+<a href="index.html" class="back-link">
+← Back
+</a>
+
+<p class="eyebrow">
+AI Infrastructure · GPU Orchestration
+</p>
+
+<h1 class="case-title">
+SoraCloud
+</h1>
+
+<p class="case-subtitle">
+AI Workflow Platform
+</p>
+
+<div class="case-nav-block">
+<p class="eyebrow">
+Role
+</p>
+<p class="case-role">
+Sole UX Designer — leading the design process end to end, working alongside a senior visual designer.
+</p>
+</div>
+
+<div class="case-nav-block">
+<p class="eyebrow">
+On This Page
+</p>
+<ul class="case-toc">
+<li><a href="#situation">Situation</a></li>
+<li><a href="#tension">Tension</a></li>
+<li><a href="#decisions">Decisions</a></li>
+<li><a href="#craft">Craft</a></li>
+<li><a href="#outcome">Outcome</a></li>
+<li><a href="#reflection">Reflection</a></li>
+</ul>
+</div>
+
+</div>
+
+<!-------------- right: case content -------------->
+
+<div class="case-content">
+
+<div class="case-cover">
+<img src="assets/images/case-studies/soracloud-cover.png" alt="SoraCloud dashboard">
+</div>
+
+<section id="situation" class="case-section">
+<h2>The Situation</h2>
+<p>
+SoraCloud is a platform for teams running AI workloads on their own GPU infrastructure. Orchestration, model training, and deployment sit in one console instead of three or four separate tools. The product has to work for two different people on the same screens: a startup CTO who wants to deploy a model without learning infrastructure, and a data science lead at a larger org who needs full visibility, cost control, and the ability to allocate resources across teams. I joined as sole UX designer for seven weeks, working with a senior visual designer who led the UI.
+</p>
+</section>
+
+<section id="tension" class="case-section">
+<h2>The Tension</h2>
+<p>
+Simplify the interface and the data science lead loses control they need. Show everything by default and the startup founder never gets past setup. Separate views for each type of user were not an option for a startup building one product on one timeline. The console had to work for both without splitting into two products.
+</p>
+</section>
+
+<section id="decisions" class="case-section">
+<h2>The Decisions</h2>
+
+<div class="decision-block">
+<h3>One console, not two products</h3>
+<p>
+The client had already decided against siloed tools before I joined: orchestration, training, and deployment would live in one platform. That set the direction, but it also raised the actual design problem. One console still had to serve two people with opposite defaults, and role based views that showed each of them a separate app were not realistic for a team building a single product on a short timeline.
+</p>
+</div>
+
+<div class="decision-block">
+<h3>Depth on demand instead of asking who you are</h3>
+<p>
+Rather than ask a user to declare their experience level up front, I built every screen so that what someone chooses to open decides how much they see. Nobody is sorted into a role. A user who never touches an advanced option never has to think about it. A user who needs that control gets to it in a couple of clicks, on the same screen, without switching modes or products. This single principle, applied consistently, is what let one console hold both users.
+</p>
+</div>
+
+</section>
+
+<section id="craft" class="case-section">
+<h2>Craft</h2>
+
+<div class="craft-grid">
+
+<article class="craft-item">
+<div class="craft-image">
+<img src="assets/images/case-studies/soracloud-setup.png" alt="Add machine flow">
+</div>
+<p><strong>Machine setup, reduced to one command.</strong> Adding a machine could have been a form asking for GPU specs, region, and cluster config. Instead it is a single install script with a token. Someone who already knows their infrastructure does not need to be walked through fields they could fill in blind.</p>
+</article>
+
+<article class="craft-item">
+<div class="craft-image">
+<img src="assets/images/case-studies/soracloud-deploy.png" alt="Deploy model, simple and advanced modes">
+</div>
+<p><strong>Three levels of detail on one deploy screen.</strong> Simple mode has four fields. Advanced mode adds model and deployment parameters. Autoscaling sits behind its own checkbox inside Advanced, revealing instance counts and target utilization only once it's checked. Each level has to be opened on purpose.</p>
+</article>
+
+<article class="craft-item">
+<div class="craft-image">
+<img src="assets/images/case-studies/soracloud-machines.png" alt="Machines monitoring table">
+</div>
+<p><strong>A monitoring table that stays plain until there's a reason to act.</strong> By default it's a read only list. Filters narrow it as you use them. Move, drain, and remove don't appear as buttons until you select a row.</p>
+</article>
+
+<article class="craft-item">
+<div class="craft-image">
+<img src="assets/images/case-studies/soracloud-recipes.png" alt="Recipes library">
+</div>
+<p><strong>Assembled workflows, given a name instead of exposed parts.</strong> Recipes like PodScribe or AutoUnderwriter package a model plus retrieval plus whatever else is needed under one name and a short description, for someone who wants a working result on day one.</p>
+</article>
+
+</div>
+
+</section>
+
+<section id="outcome" class="case-section">
+<h2>Outcome</h2>
+<p>
+This was a pre launch handoff for a startup still in stealth. There's no usage data or adoption numbers to share yet, and I'm not going to claim results that don't exist. What this case study shows is the design decisions and the screens they produced, not performance data.
+</p>
+</section>
+
+<section id="reflection" class="case-section">
+<h2>Reflection</h2>
+<p>
+The client came in already wanting one unified console, so that decision was made before the project started. What was left to solve was how to build one interface for two users with opposite needs, without either of them feeling like an afterthought. The answer wasn't a single clever screen. It was applying the same principle, optional depth, consistently across setup, deployment, monitoring, and workflow selection.
+</p>
+</section>
+
+<a href="index.html" class="primary-button case-back-cta">
+Back to Work
+</a>
+
+</div>
+
+</section>
+
+</main>
+</body>
+</html>

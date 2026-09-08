@@ -652,3 +652,317 @@ footer
     from { opacity:0; }
     to { opacity:1; }
 }
+
+/*==============================================
+  CASE STUDY
+  same tokens throughout — no new colors, no new
+  fonts. Reuses .eyebrow, .primary-button, card
+  and hover treatment already defined above.
+==============================================*/
+
+/*------------- layout -------------*/
+
+.case-layout
+{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:100px;
+    align-items:start;
+    margin-top:24px;
+    margin-bottom:120px;
+}
+
+.case-nav
+{
+    position:sticky;
+    top:72px;
+    display:flex;
+    flex-direction:column;
+}
+
+.case-content
+{
+    min-width:0;
+}
+
+/*------------- nav column -------------*/
+
+.back-link
+{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    width:fit-content;
+    font-family:"Geist Mono", monospace;
+    font-size:13px;
+    font-weight:500;
+    letter-spacing:.02em;
+    color:var(--text-light);
+    margin-bottom:40px;
+    transition:color 200ms var(--ease-out);
+}
+
+.back-link:hover
+{
+    color:var(--accent);
+}
+
+.case-title
+{
+    font-size:clamp(32px,4vw,44px);
+    font-weight:500;
+    line-height:1;
+    letter-spacing:-0.045em;
+    max-width:none;
+    margin-bottom:8px;
+}
+
+.case-subtitle
+{
+    margin-bottom:40px;
+}
+
+.case-nav-block
+{
+    margin-bottom:40px;
+}
+
+.case-nav-block:last-child
+{
+    margin-bottom:0;
+}
+
+.case-role
+{
+    max-width:32ch;
+    line-height:1.6;
+}
+
+.case-toc
+{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.case-toc a
+{
+    font-family:"Geist Mono", monospace;
+    font-size:14px;
+    font-weight:400;
+    color:var(--text);
+    transition:color 200ms var(--ease-out);
+}
+
+@media (hover:hover) and (pointer:fine)
+{
+    .case-toc a:hover
+    {
+        color:var(--accent);
+    }
+}
+
+/*------------- cover -------------*/
+
+.case-cover
+{
+    width:100%;
+    aspect-ratio:16 / 9;
+    background:var(--image-bg);
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:80px;
+}
+
+.case-cover img
+{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:top;
+}
+
+/*------------- sections -------------*/
+
+.case-section
+{
+    margin-bottom:72px;
+    scroll-margin-top:96px;
+    max-width:68ch;
+}
+
+.case-section:last-of-type
+{
+    margin-bottom:56px;
+}
+
+.case-section h2
+{
+    font-size:24px;
+    font-weight:500;
+    letter-spacing:-.04em;
+    color:var(--text);
+    margin-bottom:24px;
+}
+
+.case-section p
+{
+    margin-bottom:18px;
+    line-height:1.75;
+}
+
+.case-section p:last-child
+{
+    margin-bottom:0;
+}
+
+/*------------- decisions -------------*/
+
+.decision-block
+{
+    padding-left:24px;
+    border-left:2px solid var(--accent);
+    margin-bottom:32px;
+}
+
+.decision-block:last-child
+{
+    margin-bottom:0;
+}
+
+.decision-block h3
+{
+    font-size:18px;
+    font-weight:500;
+    letter-spacing:-.02em;
+    color:#111;
+    margin-bottom:10px;
+}
+
+.decision-block p
+{
+    line-height:1.75;
+}
+
+/*------------- craft -------------*/
+
+.craft-grid
+{
+    max-width:none;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:32px;
+    margin-bottom:24px;
+}
+
+.craft-item
+{
+    min-width:0;
+    background:var(--card-bg);
+    border:1px solid var(--border);
+    border-radius:20px;
+    overflow:hidden;
+    transition:border-color 220ms var(--ease-out), box-shadow 220ms var(--ease-out), transform 220ms var(--ease-out);
+}
+
+@media (hover:hover) and (pointer:fine)
+{
+    .craft-item:hover
+    {
+        border-color:var(--border-hover);
+        box-shadow:0 12px 32px -12px rgba(0,0,0,.12);
+        transform:translateY(-2px);
+    }
+}
+
+.craft-image
+{
+    aspect-ratio:4 / 3;
+    width:100%;
+    background:var(--image-bg);
+}
+
+.craft-image img
+{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:top;
+}
+
+.craft-item p
+{
+    padding:20px;
+    font-size:14px;
+    line-height:1.6;
+    color:var(--text-light);
+}
+
+.craft-item p strong
+{
+    color:#111;
+    font-weight:500;
+}
+
+.craft-followup
+{
+    max-width:68ch;
+}
+
+/*------------- back to work cta -------------*/
+
+.case-back-cta
+{
+    margin-top:8px;
+}
+
+/*------------- tablet -------------*/
+
+@media (max-width:1100px)
+{
+    .case-layout
+    {
+        grid-template-columns:1fr;
+        gap:56px;
+    }
+
+    .case-nav
+    {
+        position:static;
+    }
+
+    .case-nav-block
+    {
+        margin-bottom:32px;
+    }
+}
+
+/*------------- mobile -------------*/
+
+@media (max-width:700px)
+{
+    .case-layout
+    {
+        margin-bottom:80px;
+    }
+
+    .case-cover
+    {
+        margin-bottom:56px;
+    }
+
+    .case-section
+    {
+        margin-bottom:56px;
+    }
+
+    .craft-grid
+    {
+        grid-template-columns:1fr;
+    }
+
+    .decision-block
+    {
+        padding-left:18px;
+    }
+}
